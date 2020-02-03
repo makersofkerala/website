@@ -205,10 +205,10 @@ article .repo-link a span {
     box-sizing: border-box;
     padding: 1rem;
     border-radius: 1rem;
-    max-width: 400px;
+    max-width: 450px;
     padding-left: 2.5rem;
-    padding-bottom: 2rem;
-    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 4.5rem;
     margin-left: 24px;
     color: #F0F5FC;
 }
@@ -223,6 +223,25 @@ article .repo-link a span {
     bottom: -40px;
     left: -40px;
     border-radius: 40px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+#author a {
+    color: #C2B4EA;
+    text-decoration: none;
+    display: block;
+    margin: 0.25rem 0 1rem 0;
+}
+
+#author a::before {
+    content: '\2014 ';
+    padding-right: 0.25rem;
+
+}
+
+.avatar img {
+    max-width: 100%;
 }
 
 .bubble.right {
@@ -305,14 +324,15 @@ code {
 
 #subscriptions header h2 {
     font-size: 1.25rem;
+    line-height: 3rem;
 }
 
 .telegram-broadcast {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     background: #5B459C;
     color: #F0F5FC;
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     text-decoration: none;
     border-radius: 1rem;
     
@@ -323,5 +343,76 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #C2B4EA;
+}
+
+.bubble.code {
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+.bubble.code .text {
+    padding-left: 2rem;
+}
+
+.bubble.code pre {
+
+    font-family: "JetBrains Mono", "Fira Mono", monospace;
+    display: block;
+    background: #F0F5FC;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #1A1135;
+    overflow: scroll;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 0.75rem;
+    
+}
+
+.bubble.code pre code {
+    font-size: 0.75rem;
+}
+
+.reaction {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+}
+
+.reaction p {
+    
+    position: relative;
+    align-self: flex-end;
+    color: #4BEBCE;
+    top: 30px;
+    font-size: 0.875rem;
+}
+
+.reaction .avatar {
+    position: relative;
+    top: 30px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0 0.5rem;
+    width: 60px;
+    height: 60px;
+}
+
+.bubble .link {
+    background: #F0F5FC;
+    background: #C2B4EA;
+    margin: 0.5rem 0;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+
+}
+
+#distribution-count {
+    font-family: monospace;
     color: #C2B4EA;
 }
