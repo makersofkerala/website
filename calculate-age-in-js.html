@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
   <title>Makers of Kerala - Calculate Age in Javascript</title>
   <link rel="stylesheet" type="text/css" href="calculate-age-in-js-styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
@@ -8,25 +8,123 @@
       <h1>Makers of Kerala</h1>
     </header>
     <article>
-      <header><h2>Calculate Age in Javascript</h2></header>
-      <div id="post-time">
-	<p>Post Date:</p>
-	<time datetime="2020-02-02">2 Feb 2020</time>
+      <header class="title"><h2>ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം</h2></header>
+      <div id="meta-and-share">
+      <div id="post-meta">
+	<header><h2>എഴുത്ത് തീയ്യതി</h2></header>
+	<time datetime="2020-02-04">21 മകരം 1195</time>
+	<p id="view-counter"></p>
       </div>
+	<div class="social-media-links top">
+<header><h2>പങ്കവെയ്ക്കൂ</h2></header>
+<ul>
+  <li><a href="https://wa.me/?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%3A%20https%3A%2F%2Fmakersofkerala.now.sh">വാട്ട്സ്ആപ്പ്</a><li>
+  <li><a href="https://www.instagram.com/makersofkerala">ഇൻസ്റ്റാഗ്രാം</a><li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh">ഫെയ്‌സ്‌ബുക്ക്‌</a><li>
+  <li><a href="https://twitter.com/intent/tweet?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh">ട്വിറ്റർ</a><li>
+    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://makersofkerala.now.sh&summary=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh">ലിങ്ക്ഡിൻ</a></li>
+</ul>
+</div>
+</div>
       <nav>
 	<p>Read in</p>
 	<ul>
-	  <li><a><span>മ</span>മലയാളം</a></li>
-	  <li><a><span>Ml</span>Manglish</a></li>
-	  <li><a><span>En</span>English</a></li>
+	  <li><a class="active"><span>മ</span><p>മലയാളം</p></a></li>
+	  <li><a><span>Ml</span><p>Manglish</p></a></li>
+	  <li><a href="./calculate-age-in-js-en.html"><span>En</span><p>English</p></a></li>
 	</ul>
 	</nav>
-	<footer>
+      <div id="conversation">
+      <div class="bubble">
+	<div class="text">ഈ ജാവാസ്ക്രിപ്റ്റിൽ വയസ്സ് കണ്ടെത്തുന്നതെങ്ങനെയാണെന്ന് കാണണോ നിങ്ങൾക്ക് ?</div>
+	<div class="avatar"></div>
+	</div>
+
+      <div class="bubble right">
+	<div class="text">കാണാം</div>
+	<div class="avatar"></div>
+	</div>
+
+      <div class="bubble code">
+	<div class="text">ആദ്യം ഇങ്ങനെ ഫങ്ക്ഷൻ ഡിക്ലയർ ചെയ്യണം.</div>
+	<div class="avatar"></div>
+	</div>
+
+      <div class="bubble">
+	<div class="text">എന്നിട്ടിങ്ങനെ വിളിക്കണം <code>calcAge(“12 Jan 1999”)</code> അപ്പൊ 21 എന്ന് കിട്ടും!</div>
+	<div class="avatar"></div>
+	</div>
+
+      <div class="bubble">
+	<div class="text">
+	  <p>പിന്നെ ഒരു കാര്യം. ആ <code>dateString</code> ഈ രൂപത്തിലൊക്കെ അടിക്കണം:</p>
+	  <p>
+	    <ul>
+<li><code>2020 02 01 (yyyy mm dd)</code></li>
+<li><code>01 Feb 2020 (dd mmm yyyy)</code></li>
+<li><code>1264962600000 (milliseconds since 1970)</code></li>
+</ul>
+</p>
+	  <p>മുഴുവൻ രേഖ കാണണോ? ഇതാണാ രേഖ:</p>
+</div>
+	<div class="avatar"></div>
+	</div>
+
+      <div class="bubble right">
+	<div class="text">അയ്യേ......</div>
+	<div class="avatar"></div>
+	</div>
+      </div>
+
+      <section><header><h2>പൂർണരൂപം</h2></header></section>
+
+      <div class="code-display">
+	<div class="traffic-lights">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<pre>
+	  <code>
+const calcAge = (dateString) => {
+
+  const birthday = new Date(dateString).getTime();
+
+  const msInYear = 365.25*24*60*60*1000;
+
+  return parseInt((Date.now() - birthday) / msInYear);
+
+}
+
+// calcAge("12 Dec, 1999") => 20
+</code>
+	</pre>
+      </div>
+
+      <!--
+	<div class="repo-link">
 	  <a href="https://github.com/makersofkerala/hacktuesday">
-	  Code available for download at
+	  <p>Code available for download at</p>
 	  <span>https://github.com/makersofkerala/hacktuesday</span></a>
-	  <footer>
+	  </div>
+	-->
+	    
+	<div class="social-media-links bottom">
+<header><h2>ഈ പോസ്റ്റ് ഫെലോ ഹാക്കേഴ്‌സുമായി പങ്കവെയ്ക്കൂ</h2></header>
+<ul>
+  <li><a href="https://wa.me/?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%3A%20https%3A%2F%2Fmakersofkerala.now.sh">വാട്ട്സ്ആപ്പ്</a><li>
+  <li><a href="https://www.instagram.com/makersofkerala">ഇൻസ്റ്റാഗ്രാം</a><li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh">ഫെയ്‌സ്‌ബുക്ക്‌</a><li>
+  <li><a href="https://twitter.com/intent/tweet?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh">ട്വിറ്റർ</a><li>
+    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://makersofkerala.now.sh&summary=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh">ലിങ്ക്ഡിൻ</a></li>
+</ul>
+</div>
+
+	<div id="subscriptions">
+<header><h2>ഇത് പോലുള്ള പോസ്റ്റുകൾ ഉടനടി ലഭിക്കാനായി <a class="telegram-broadcast" href="https://t.me/makersofkerala">മേക്കേഴ്‌സ് ബ്രോഡ്‌ക്കാസ്റ്റ്</a>വരിക്കാരാവുക</h2></header>
+	  </div>
+
     </article>
+    <footer>&copy; Makers of Kerala. 2020</footer>
   </body>
 </html>
-

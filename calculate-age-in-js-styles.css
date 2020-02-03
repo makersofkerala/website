@@ -26,36 +26,70 @@ ul {
 
 #main-header h1 {
     font-size: 1rem;
-    padding: 1rem;
+    padding: 1rem 3rem;
 }
 
-#post-time {
+#post-meta {
+    font-family: "JetBrains Mono", "Fira Mono", monospace;
     color: #C2B4EA;
-    margin: 0.5rem 0;
+    margin-right: 2rem;
+}
+
+#post-meta time {
+    line-height: 2rem;
+}
+
+
+#post-meta h2, .social-media-links.top h2 {
+    
+    color: #4BEBCE;
+    font-size: 1.125rem;
+
+}
+
+.social-media-links.top a {
+
+    color: #C2B4EA;
+    
+}
+
+.social-media-links.top a:hover {
+    color: white;
 }
 
 article {
 
     font-family: "Baloo Chettan", sans-serif;
-    padding: 0 1rem;
+    padding: 0 3rem;
     box-sizing: border-box;
 
 }
 
-article header, #post-time {
+.social-media-links.top {
 
     font-family: "JetBrains Mono", "Fira Mono", monospace;
+    color: #C2B4EA;
     
 }
 
+.social-media-links ul {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-article header {
+.social-media-links ul li {
+    margin-right: 1rem;
+    line-height: 2rem;
+}
+
+
+article .title {
     font-size: 1.5rem;
     max-width: 400px;
     margin-top: 1rem;
 }
 
-article nav p {
+article nav > p {
     margin: 0 2rem;
 }
 
@@ -65,7 +99,7 @@ article nav {
     grid-template-columns: auto 1fr;
     background: #2D2154;
     padding: 1rem 0;
-    display: border-box;
+    box-sizing: border-box;
     border-radius: 10px;
     align-items: center;
     margin: 1rem 0;
@@ -73,44 +107,221 @@ article nav {
 
 article nav ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 200px);
     grid-gap: 10px;
 }
 
+article nav li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+}
+
+article nav li a p {
+    flex: 1 1 auto;
+    margin-left: 0.5rem;
+}
+
+article nav .active {
+    background: #C1B4EA;
+    color: #1A1135;
+}
+
+article nav a.active:hover {
+    background: #C1B4EA;
+    
+}
+
+article nav a:hover {
+    background: #7E73A2;
+}
+
 article nav li span {
+    flex: 0 0 auto;
     background: #4BEBCE;
     color: #1A1135;
-    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
     border-radius: 4px;
-    display: inline-block;
-    margin: 0 1rem;
+    margin-left: 1rem;
 }
 
 
-article footer {
+article nav li a.active span,
+article nav li a:hover span {
+    background: #5B459C;
+    color: white;
+}
+
+article .repo-link {
     font-family: "Jetbrains Mono", "Fira Mono", monospace;
+    margin-bottom: 2rem;
 }
 
-article footer a {
+article .repo-link a {
 
     display: inline-block;
+    font-size: 0.875rem;
     position: relative;
     overflow: hidden;
     color: #F0F5FC;
     background: #5B459C;
     border-radius: 10px;
-    padding: 0.5rem 0rem 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
     text-decoration: none;
     line-height: 1rem;
 
 }
 
-article footer a:hover {
-    top: -2px;
+article .repo-link a p {
+    padding: 0 1rem;
+    min-width: 200px;
 }
 
-article footer a span {
+article .repo-link a span {
     background: #F0F5FC;
     color: #1A1135;
-    padding: 0.75rem;
+    padding: 0.75rem 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bubble {
+    position: relative;
+    background: #5B459C;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    padding-left: 2.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 24px;
+    color: #F0F5FC;
+}
+
+.bubble .avatar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #F0F5FC;
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+    left: -40px;
+    border-radius: 40px;
+}
+
+.bubble.right {
+    padding-left: 1rem;
+    padding-right: 2.5rem;
+    background: #4BEBCE;
+    color: #1A1135;
+    margin-right: 24px;
+    margin-left: auto;
+}
+
+.bubble.right .avatar {
+    left: auto;
+    right: 0;
+    margin:0;
+    margin-right: -24px;
+
+}
+
+#conversation {
+    align-items: center;
+    padding: 2rem 0;
+    
+}
+
+code {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.875rem;
+}
+
+#meta-and-share {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.code-display {
+    color: #1A1135;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #C2B4EA;
+    box-shadow: 0px 10px 20px rgba(31, 19, 65, 0.5);
+
+    
+}
+
+.code-display pre code {
+    
+    font-size: 0.6rem;
+}
+
+.code-display .traffic-lights {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.code-display .traffic-lights span {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    border-radius: 16px;
+    background: #1A1135;
+}
+
+.social-media-links.bottom {
+    margin-bottom: 2rem;
+}
+
+.social-media-links.bottom a {
+
+    color: #C2B4EA;
+    
+}
+
+.social-media-links.bottom header {
+    max-width: 600px;
+    font-size: 1.5rem;
+}
+
+#subscriptions header h2 {
+    font-size: 1.25rem;
+}
+
+.telegram-broadcast {
+    padding: 1rem;
+    background: #5B459C;
+    color: #F0F5FC;
+    display: inline-block;
+    margin: 0 1rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    
+}
+
+footer {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C2B4EA;
 }
