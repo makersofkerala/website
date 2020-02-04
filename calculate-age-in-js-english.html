@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Makers of Kerala - Calculate Age in Javascript</title>
+<meta name="title" content="Makers of Kerala - Calculate Age in Javascript">
+<meta name="description" content="A tutorial on calculating age using Javascript.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://makers-of-kerala.now.sh/calculate-age-in-js.html">
+<meta property="og:title" content="Makers of Kerala - Calculate Age in Javascript">
+<meta property="og:description" content="A tutorial on calculating age using Javascript.">
+<meta property="og:image" content="https://makers-of-kerala.now.sh/calculate-age-in-js-meta-card.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://makers-of-kerala.now.sh/calculate-age-in-js.html">
+<meta property="twitter:title" content="Makers of Kerala - Calculate Age in Javascript">
+<meta property="twitter:description" content="A tutorial on calculating age using Javascript.">
+<meta property="twitter:image" content="https://makers-of-kerala.now.sh/calculate-age-in-js-meta-card.png">
+  <title>Makers of Kerala - Calculate Age in Javascript</title>
+  <link rel="stylesheet" type="text/css" href="calculate-age-in-js-styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
+  <body>
+    <header id="main-header">
+      <h1>Makers of Kerala</h1>
+    </header>
+    <article>
+      <header class="title"><h2>Calculate Age in Javascript</h2></header>
+      <address id="author"><a rel="author" href="https://twitter.com/prathyvsh">Editor</a></address>
+      <div id="meta-and-share">
+      <div id="post-meta">
+	<header><h2>Post Date</h2></header>
+	<time datetime="2020-02-04">4 February 2020</time>
+      </div>
+	<div class="social-media-links top">
+<header><h2>Share</h2></header>
+<ul>
+  <li><a href="whatsapp://send?text=Checkout%20creating%20a%20simple%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala:%20https://makersofkerala.now.sh/calculate-age-in-js-english.html">Whatsapp</a></li>
+  <li><a href="https://www.instagram.com/makersofkerala">Instagram</a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh/calculate-age-in-js-english.html">Facebook</a></li>
+  <li><a href="https://twitter.com/intent/tweet?url=Checkout%20creating%20a%20simple%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala:%20https://makersofkerala.now.sh/calculate-age-in-js-english.html&text=Creating%20a%20simple%20frontend%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala">Twitter</a></li>
+    <li><a href="https://www.linkedin.com/shareArticle?url=https://makersofkerala.now.sh/calculate-age-in-js-english.html&title=Creating%20a%20simple%20frontend%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+      <nav>
+	<p>Read in</p>
+	<ul>
+	  <li><a href="./calculate-age-in-js.html"><span>മ</span><p>മലയാളം</p></a></li>
+	  <li><a href="./calculate-age-in-js-manglish.html"><span>Ml</span><p>Manglish</p></a></li>
+	  <li><a href="#thisisit" class="active"><span>En</span><p>English</p></a></li>
+	</ul>
+	</nav>
+      <div id="conversation">
+      <div class="bubble">
+	<div class="text">Do you wanna see how age can be calculated
+	in Javascript?</div>
+	<div class="avatar"><img src="sankaradi1.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+      <div class="bubble right">
+	<div class="text">Yeeaaap</div>
+	<div class="avatar"><img src="a10cipation.png" alt="Mohanlal from Vietnam Colony"/></div>
+	</div>
+
+      <div class="bubble code">
+	<div class="code">
+	  <pre><code>
+const calcAge = (dateString) => {
+
+  const birthday = new Date(dateString).getTime();
+
+  const msInYear = 365.25*24*60*60*1000;
+
+  return parseInt((Date.now() - birthday) / msInYear);
+
+}
+</code>
+</pre>
+	  </div>
+	<div class="text">First, declare the function like this.</div>
+	<div class="avatar"><img src="sankaradi2.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+      <div class="bubble">
+	<div class="text">And call it so: <code>calcAge(“12 Jan
+	1999”)</code> You'll get 21!</div>
+	<div class="avatar"><img src="sankaradi3.png" alt="Sankaradi from Vietnam Colony"/></div>
+	<div class="reaction">
+	  <p>2 Reactions</p>
+	<div class="avatar"><img src="innocentwow.png" alt="Innocent from Vietnam Colony"/></div>
+	<div class="avatar"><img src="a10wow.png" alt="Mohanlal from Vietnam Colony"/></div>
+	</div>
+	</div>
+
+      <div class="bubble">
+	<div class="text">
+	  <p>One more thing. That <code>dateString</code> has to be in
+	  one of these format:</p>
+	  <p>
+	    <ul>
+<li><code>2020 02 01 (yyyy mm dd)</code></li>
+<li><code>01 Feb 2020 (dd mmm yyyy)</code></li>
+<li><code>1264962600000 (milliseconds since 1970)</code></li>
+</ul>
+</p>
+</div>
+	<div class="avatar"><img src="sankaradiprotecc.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+      <div class="bubble">
+	<div class="text">
+	  <p>Want to see the <code>dateString</code> format document? This is that document: <a class="link"  href="https://tc39.es/ecma262/#sec-date-time-string-format">ECMA 262 Specification</a></p>
+</div>
+	<div class="avatar"><img src="sankaradiattacc.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+      <div class="bubble right">
+	<div class="text">Ugh . . .</div>
+	<div class="avatar"><img src="innocentdone.png" alt="Innocent from Vietnam Colony"/></div>
+	</div>
+      </div>
+
+      <section><header><h2>Final Screenshot</h2></header></section>
+
+      <div class="code-display">
+	<div class="traffic-lights">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<pre>
+	  <code>
+const calcAge = (dateString) => {
+
+  const birthday = new Date(dateString).getTime();
+
+  const msInYear = 365.25*24*60*60*1000;
+
+  return parseInt((Date.now() - birthday) / msInYear);
+
+}
+
+// calcAge("12 Jan, 1999") => 21
+</code>
+	</pre>
+      </div>
+
+	<div class="repo-link">
+	  <a href="https://github.com/makersofkerala/hacktuesday">
+	  <p>Code available for download at</p>
+	  <span>https://github.com/makersofkerala/hacktuesday</span></a>
+	  </div>
+	    
+	<div class="social-media-links bottom">
+<header><h2>If you loved the post, share it with fellow hackers</h2></header>
+<ul>
+  <li><a href="whatsapp://send?text=Checkout%20creating%20a%20simple%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala:%20https://makersofkerala.now.sh/calculate-age-in-js-english.html">Whatsapp</a></li>
+  <li><a href="https://www.instagram.com/makersofkerala">Instagram</a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh/calculate-age-in-js-english.html">Facebook</a></li>
+  <li><a href="https://twitter.com/intent/tweet?url=Checkout%20creating%20a%20simple%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala:%20https://makersofkerala.now.sh/calculate-age-in-js-english.html&text=Creating%20a%20simple%20frontend%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala">Twitter</a></li>
+    <li><a href="https://www.linkedin.com/shareArticle?url=https://makersofkerala.now.sh/calculate-age-in-js-english.html&title=Creating%20a%20simple%20frontend%20web%20application%20%E2%80%94%20Calculate%20age%20in%20Javascript%20by%20@makersofkerala">LinkedIn</a></li>
+</ul>
+</div>
+
+	<div id="subscriptions">
+<header><h2>To get the upcoming posts, subscribe
+    to <a class="telegram-broadcast"
+	  href="https://t.me/makersofkerala">The Makers Broadcast</a></h2></header>
+	  </div>
+<div id="distribution-count"><p>This post has been distributed <span class="counter">1</span> times.</p></div>
+
+    </article>
+    <footer>&copy; Makers of Kerala. 2020</footer>
+    <script type="module" src="analytics.js"></script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ml">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="title" content="Makers of Kerala - Javascriptilengane praayam ganikkaam">
+<meta name="description" content="A tutorial on calculating age using Javascript.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://makers-of-kerala.now.sh/calculate-age-in-js.html">
+<meta property="og:title" content="Makers of Kerala - Jaavascriptilengane praayam ganikkaam">
+<meta property="og:description" content="A tutorial on calculating age using Javascript.">
+<meta property="og:image" content="https://makers-of-kerala.now.sh/calculate-age-in-js-meta-card.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://makers-of-kerala.now.sh/calculate-age-in-js.html">
+<meta property="twitter:title" content="Makers of Kerala - Jaavascriptilengane praayam ganikkaam">
+<meta property="twitter:description" content="A tutorial on calculating age using Javascript.">
+<meta property="twitter:image" content="https://makers-of-kerala.now.sh/calculate-age-in-js-meta-card.png">
+  <title>Makers of Kerala - Javascriptilengane praayam ganikkaam</title>
+  <link rel="stylesheet" type="text/css" href="calculate-age-in-js-styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
+  <body>
+    <header id="main-header">
+      <h1>Makers of Kerala</h1>
+    </header>
+    <article>
+      <header class="title"><h2>Javascriptilengane praayam ganikkaam</h2></header>
+      <address id="author"><a rel="author"
+			      href="https://twitter.com/prathyvsh">Swantham Legakhan</a></address>
+      <div id="meta-and-share">
+	<div id="post-meta">
+	  <header><h2>Ezhuthu thiyathi</h2></header>
+	  <time datetime="2020-02-04">21 Makaram 1195</time>
+	</div>
+	<div class="social-media-links top">
+	  <header><h2>Panguveykku</h2></header>
+	  <ul>
+	    <li><a href="whatsapp://send?text=Poli%20saanam%20****.%20Javascriptilengane%20praayam%20ganikkaam:%20https://makersofkerala.now.sh/calculate-age-in-js-manglish.html">Whatsapp</a></li>
+	    <li><a href="https://www.instagram.com/makersofkerala">Instagram</a></li>
+	    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh/calculate-age-in-js-manglish.html">Facebook</a></li>
+	    <li><a href="https://twitter.com/intent/tweet?url=https://makersofkerala.now.sh/calculate-age-in-js-manglish.html&text=Poli%20saanam%20****.%20Javascriptilengane%20praayam%20ganikkaam%20%E2%80%94%20@makersofkerala">Twitter</a></li>
+	    <li><a href="https://www.linkedin.com/shareArticle?url=https://makersofkerala.now.sh/calculate-age-in-js-manglish.html&title=Poli%20saanam%20****.%20Javascriptilengane%20praayam%20ganikkaam%20%E2%80%94%20@makersofkerala">LinkedIn</a></li>
+	  </ul>
+	</div>
+      </div>
+      <nav>
+	<p>Read in</p>
+	<ul>
+	  <li><a href="./calculate-age-in-js.html"><span>മ</span><p>മലയാളം</p></a></li>
+	  <li><a href="#ithaanuathuithaanu" class="active"><span>Ml</span><p>Manglish</p></a></li>
+	  <li><a href="./calculate-age-in-js-english.html"><span>En</span><p>English</p></a></li>
+	</ul>
+      </nav>
+      <div id="conversation">
+	<div class="bubble">
+	  <div class="text">Ee Javascriptil vayassu kandethunnathu
+	    enganeyaanennu kaanano ningalkku?</div>
+	  <div class="avatar"><img src="sankaradi1.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+	<div class="bubble right">
+	  <div class="text">Kaanam</div>
+	  <div class="avatar"><img src="a10cipation.png" alt="Mohanlal from Vietnam Colony"/></div>
+	</div>
+
+	<div class="bubble code">
+	  <div class="code">
+	    <pre><code>
+		const calcAge = (dateString) => {
+
+		const birthday = new Date(dateString).getTime();
+
+		const msInYear = 365.25*24*60*60*1000;
+
+		return parseInt((Date.now() - birthday) / msInYear);
+
+		}
+	      </code>
+	    </pre>
+	  </div>
+	  <div class="text">Aadyam ingane function declare cheyyanam.</div>
+	  <div class="avatar"><img src="sankaradi2.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+	<div class="bubble">
+	  <div class="text"> Ennitingane vilikanam 
+	    <code>calcAge(“12 Jan 1999”)</code> appo 21 ennu kittum!</div>
+
+	  <div class="avatar"><img src="sankaradi3.png" alt="Sankaradi from Vietnam Colony"/></div>
+
+	  <div class="reaction">
+	    <p>2 Reactions</p>
+	    <div class="avatar"><img src="innocentwow.png" alt="Innocent from Vietnam Colony"/></div>
+	    <div class="avatar"><img src="a10wow.png" alt="Mohanlal from Vietnam Colony"/></div>
+	  </div>
+	</div>
+
+	<div class="bubble">
+	  <div class="text">
+	    <p>Pinne oru kaaryam. Aa <code>dateString</code> ee roopathilokke adikkanam:</p>
+	    <p>
+	      <ul>
+		<li><code>2020 02 01 (yyyy mm dd)</code></li>
+		<li><code>01 Feb 2020 (dd mmm yyyy)</code></li>
+		<li><code>1264962600000 (milliseconds since 1970)</code></li>
+	      </ul>
+	    </p>
+	  </div>
+	  <div class="avatar"><img src="sankaradiprotecc.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+	<div class="bubble">
+	  <div class="text">
+	    <p>Muzhuvan rekha kaanano? Ithaana rekha:
+	      <a class="link"  href="https://tc39.es/ecma262/#sec-date-time-string-format">ECMA 262 Specification</a></p>
+	  </div>
+	  <div class="avatar"><img src="sankaradiattacc.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+	<div class="bubble right">
+	  <div class="text">Ayyeee . . .</div>
+	  <div class="avatar"><img src="innocentdone.png" alt="Innocent from Vietnam Colony"/></div>
+	</div>
+      </div>
+
+      <section><header><h2>Poornaroopam</h2></header></section>
+
+      <div class="code-display">
+	<div class="traffic-lights">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<pre>
+	  <code>
+	    const calcAge = (dateString) => {
+
+	    const birthday = new Date(dateString).getTime();
+
+	    const msInYear = 365.25*24*60*60*1000;
+
+	    return parseInt((Date.now() - birthday) / msInYear);
+
+	    }
+
+	    // calcAge("12 Jan, 1999") => 21
+	  </code>
+	</pre>
+      </div>
+
+      <div class="repo-link">
+	<a href="https://github.com/makersofkerala/hacktuesday">
+	  <p>Code available for download at</p>
+	  <span>https://github.com/makersofkerala/hacktuesday</span></a>
+      </div>
+      </div>
+      
+      <div class="social-media-links bottom">
+	<header><h2>Ee post ishtamaayengil fellow hackersumaayi panguveykuu</h2></header><ul>
+	  <li><a href="whatsapp://send?text=Poli%20saanam%20****.%20Javascriptilengane%20praayam%20ganikkaam:%20https://makersofkerala.now.sh/calculate-age-in-js-manglish.html">Whatsapp</a></li>
+	  <li><a href="https://www.instagram.com/makersofkerala">Instagram</a></li>
+	  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh/calculate-age-in-js-manglish.html">Facebook</a></li>
+	  <li><a href="https://twitter.com/intent/tweet?url=https://makersofkerala.now.sh/calculate-age-in-js-manglish.html&text=Poli%20saanam%20****.%20Javascriptilengane%20praayam%20ganikkaam%20%E2%80%94%20@makersofkerala">Twitter</a></li>
+	  <li><a href="https://www.linkedin.com/shareArticle?url=https://makersofkerala.now.sh/calculate-age-in-js-manglish.html&title=Poli%20saanam%20****.%20Javascriptilengane%20praayam%20ganikkaam%20%E2%80%94%20@makersofkerala">LinkedIn</a></li>
+	</ul>
+</div>
+
+<div id="subscriptions">
+  <header><h2>Ini varaan pokunna postugal udanadi
+      labhikaanayi <a class="telegram-broadcast" href="https://t.me/makersofkerala">Makers Broadcast</a>varikkaaravuga</h2></header>
+</div>
+
+<div id="distribution-count"><p>Ee post
+    ithuvare <span class="counter">1</span> thavana vitharanam cheythu.</p></div>
+</article>
+<footer>&copy; Makers of Kerala. 2020</footer>
+<script type="module" src="analytics.js"></script>
+</body>
+</html>

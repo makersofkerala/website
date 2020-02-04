@@ -2,7 +2,25 @@
 <html lang="ml">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Makers of Kerala - Calculate Age in Javascript</title>
+<!-- Primary Meta Tags -->
+<title>Makers of Kerala - ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം</title>
+<meta name="title" content="Makers of Kerala - ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം">
+<meta name="description" content="A tutorial on calculating age using Javascript.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://makers-of-kerala.now.sh/calculate-age-in-js.html">
+<meta property="og:title" content="Makers of Kerala - ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം">
+<meta property="og:description" content="A tutorial on calculating age using Javascript.">
+<meta property="og:image" content="https://makers-of-kerala.now.sh/calculate-age-in-js-meta-card.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://makers-of-kerala.now.sh/calculate-age-in-js.html">
+<meta property="twitter:title" content="Makers of Kerala - ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം">
+<meta property="twitter:description" content="A tutorial on calculating age using Javascript.">
+<meta property="twitter:image" content="https://makers-of-kerala.now.sh/calculate-age-in-js-meta-card.png">
+  <title>Makers of Kerala - ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം</title>
   <link rel="stylesheet" type="text/css" href="calculate-age-in-js-styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
   <body>
@@ -11,97 +29,96 @@
     </header>
     <article>
       <header class="title"><h2>ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം</h2></header>
-      <p id="author"><a href="https://twitter.com/prathyvsh">സ്വന്തം ലേഖകൻ</a></p>
+      <address id="author"><a rel="author" href="https://twitter.com/prathyvsh">സ്വന്തം ലേഖകൻ</a></address>
       <div id="meta-and-share">
-      <div id="post-meta">
-	<header><h2>എഴുത്ത് തീയ്യതി</h2></header>
-	<time datetime="2020-02-04">21 മകരം 1195</time>
-	<p id="view-counter"></p>
-      </div>
+	<div id="post-meta">
+	  <header><h2>എഴുത്ത് തീയ്യതി</h2></header>
+	  <time datetime="2020-02-04">21 മകരം 1195</time>
+	</div>
 	<div class="social-media-links top">
-<header><h2>പങ്കുവെയ്ക്കൂ</h2></header>
-<ul>
-  <li><a href="https://wa.me/?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%3A%20https%3A%2F%2Fmakersofkerala.now.sh">വാട്ട്സ്ആപ്പ്</a><li>
-  <li><a href="https://www.instagram.com/makersofkerala">ഇൻസ്റ്റാഗ്രാം</a><li>
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh">ഫെയ്‌സ്‌ബുക്ക്‌</a><li>
-  <li><a href="https://twitter.com/intent/tweet?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh by @makersofkerala">ട്വിറ്റർ</a><li>
-    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://makersofkerala.now.sh&summary=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh">ലിങ്ക്ഡിൻ</a></li>
-</ul>
-</div>
-</div>
+	  <header><h2>പങ്കുവെയ്ക്കൂ</h2></header>
+	  <ul>
+	    <li><a href="whatsapp://send?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82%20****.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh/calculate-age-in-js.html">വാട്ട്സ്ആപ്പ്</a></li>
+	    <li><a href="https://www.instagram.com/makersofkerala">ഇൻസ്റ്റാഗ്രാം</a></li>
+	    <li><a href="https://www.facebook.com/sharer.php?u=https://makers-of-kerala.prathyush.now.sh/calculate-age-in-js.html">ഫെയ്‌സ്‌ബുക്ക്‌</a></li>
+	    <li><a href="https://twitter.com/intent/tweet?url=https://makers-of-kerala.prathyush.now.sh/calculate-age-in-js.html&text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82%20****.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%20%E2%80%94%20@makersofkerala">ട്വിറ്റർ</a></li>
+	    <li><a href="https://www.linkedin.com/shareArticle?url=https://makers-of-kerala.prathyush.now.sh/calculate-age-in-js.html&title=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82%20****.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%20%E2%80%94%20@makersofkerala">ലിങ്ക്ഡിൻ</a></li>
+	  </ul>
+	</div>
+      </div>
       <nav>
 	<p>Read in</p>
 	<ul>
-	  <li><a class="active"><span>മ</span><p>മലയാളം</p></a></li>
-	  <li><a><span>Ml</span><p>Manglish</p></a></li>
-	  <li><a href="./calculate-age-in-js-en.html"><span>En</span><p>English</p></a></li>
+	  <li><a href="#ഇതാണ്_അത്_ഇതാണ്" class="active"><span>മ</span><p>മലയാളം</p></a></li>
+	  <li><a href="./calculate-age-in-js-manglish.html"><span>Ml</span><p>Manglish</p></a></li>
+	  <li><a href="./calculate-age-in-js-english.html"><span>En</span><p>English</p></a></li>
 	</ul>
-	</nav>
+      </nav>
       <div id="conversation">
-      <div class="bubble">
-	<div class="text">ഈ ജാവാസ്ക്രിപ്റ്റിൽ വയസ്സ് കണ്ടെത്തുന്നതെങ്ങനെയാണെന്ന് കാണണോ നിങ്ങൾക്ക് ?</div>
-	<div class="avatar"><img src="sankaradi1.png" alt="Sankaradi from Vietnam Colony"/></div>
+	<div class="bubble">
+	  <div class="text">ഈ ജാവാസ്ക്രിപ്റ്റിൽ വയസ്സ് കണ്ടെത്തുന്നതെങ്ങനെയാണെന്ന് കാണണോ നിങ്ങൾക്ക് ?</div>
+	  <div class="avatar"><img src="sankaradi1.png" alt="Sankaradi from Vietnam Colony"/></div>
 	</div>
 
-      <div class="bubble right">
-	<div class="text">കാണാം</div>
-	<div class="avatar"><img src="a10cipation.png" alt="Mohanlal from Vietnam Colony"/></div>
+	<div class="bubble right">
+	  <div class="text">കാണാം</div>
+	  <div class="avatar"><img src="a10cipation.png" alt="Mohanlal from Vietnam Colony"/></div>
 	</div>
 
-      <div class="bubble code">
-	<div class="code">
-	  <pre><code>
-const calcAge = (dateString) => {
+	<div class="bubble code">
+	  <div class="code">
+	    <pre><code>
+		const calcAge = (dateString) => {
 
-  const birthday = new Date(dateString).getTime();
+		const birthday = new Date(dateString).getTime();
 
-  const msInYear = 365.25*24*60*60*1000;
+		const msInYear = 365.25*24*60*60*1000;
 
-  return parseInt((Date.now() - birthday) / msInYear);
+		return parseInt((Date.now() - birthday) / msInYear);
 
-}
-</code>
-</pre>
+		}
+	      </code>
+	    </pre>
 	  </div>
-	<div class="text">ആദ്യം ഇങ്ങനെ ഫങ്ങ്ഷൻ ഡിക്ലയർ ചെയ്യണം.</div>
-	<div class="avatar"><img src="sankaradi2.png" alt="Sankaradi from Vietnam Colony"/></div>
+	  <div class="text">ആദ്യം ഇങ്ങനെ ഫങ്ങ്ഷൻ ഡിക്ലയർ ചെയ്യണം.</div>
+	  <div class="avatar"><img src="sankaradi2.png" alt="Sankaradi from Vietnam Colony"/></div>
 	</div>
 
-      <div class="bubble">
-	<div class="text">എന്നിട്ടിങ്ങനെ വിളിക്കണം <code>calcAge(“12 Jan 1999”)</code> അപ്പൊ 21 എന്ന് കിട്ടും!</div>
-	<div class="avatar"><img src="sankaradi3.png" alt="Sankaradi from Vietnam Colony"/></div>
-	<div class="reaction">
-	  <p>2 Reactions</p>
-	<div class="avatar"><img src="innocentwow.png" alt="Innocent from Vietnam Colony"/></div>
-	<div class="avatar"><img src="a10wow.png" alt="Mohanlal from Vietnam Colony"/></div>
-	</div>
-	</div>
-
-      <div class="bubble">
-	<div class="text">
-	  <p>പിന്നെ ഒരു കാര്യം. ആ <code>dateString</code> ഈ രൂപത്തിലൊക്കെ അടിക്കണം:</p>
-	  <p>
-	    <ul>
-<li><code>2020 02 01 (yyyy mm dd)</code></li>
-<li><code>01 Feb 2020 (dd mmm yyyy)</code></li>
-<li><code>1264962600000 (milliseconds since 1970)</code></li>
-</ul>
-</p>
-</div>
-	<div class="avatar"><img src="sankaradiprotecc.png" alt="Sankaradi from Vietnam Colony"/></div>
+	<div class="bubble">
+	  <div class="text">എന്നിട്ടിങ്ങനെ വിളിക്കണം <code>calcAge(“12 Jan 1999”)</code> അപ്പൊ 21 എന്ന് കിട്ടും!</div>
+	  <div class="avatar"><img src="sankaradi3.png" alt="Sankaradi from Vietnam Colony"/></div>
+	  <div class="reaction">
+	    <p>2 Reactions</p>
+	    <div class="avatar"><img src="innocentwow.png" alt="Innocent from Vietnam Colony"/></div>
+	    <div class="avatar"><img src="a10wow.png" alt="Mohanlal from Vietnam Colony"/></div>
+	  </div>
 	</div>
 
-      <div class="bubble">
-	<div class="text">
-	  <p>മുഴുവൻ രേഖ കാണണോ? ഇതാണാ രേഖ:
-	  <a class="link"  href="https://tc39.es/ecma262/#sec-date-time-string-format">ECMA 262 Specification</a></p>
-</div>
-	<div class="avatar"><img src="sankaradiattacc.png" alt="Sankaradi from Vietnam Colony"/></div>
+	<div class="bubble">
+	  <div class="text">
+	    <p>പിന്നെ ഒരു കാര്യം. ആ <code>dateString</code> ഈ രൂപത്തിലൊക്കെ അടിക്കണം:</p>
+	    <p>
+	      <ul>
+		<li><code>2020 02 01 (yyyy mm dd)</code></li>
+		<li><code>01 Feb 2020 (dd mmm yyyy)</code></li>
+		<li><code>1264962600000 (milliseconds since 1970)</code></li>
+	      </ul>
+	    </p>
+	  </div>
+	  <div class="avatar"><img src="sankaradiprotecc.png" alt="Sankaradi from Vietnam Colony"/></div>
 	</div>
 
-      <div class="bubble right">
-	<div class="text">അയ്യേ . . .</div>
-	<div class="avatar"><img src="innocentdone.png" alt="Innocent from Vietnam Colony"/></div>
+	<div class="bubble">
+	  <div class="text">
+	    <p>ഈ <code>dateString</code>ന്റെ ഫോർമാറ്റ് രേഖ കാണണോ? ഇതാണാ രേഖ:
+	      <a class="link"  href="https://tc39.es/ecma262/#sec-date-time-string-format">ECMA 262 Specification</a></p>
+	  </div>
+	  <div class="avatar"><img src="sankaradiattacc.png" alt="Sankaradi from Vietnam Colony"/></div>
+	</div>
+
+	<div class="bubble right">
+	  <div class="text">അയ്യേ . . .</div>
+	  <div class="avatar"><img src="innocentdone.png" alt="Innocent from Vietnam Colony"/></div>
 	</div>
       </div>
 
@@ -115,45 +132,43 @@ const calcAge = (dateString) => {
 	</div>
 	<pre>
 	  <code>
-const calcAge = (dateString) => {
+	    const calcAge = (dateString) => {
 
-  const birthday = new Date(dateString).getTime();
+	    const birthday = new Date(dateString).getTime();
 
-  const msInYear = 365.25*24*60*60*1000;
+	    const msInYear = 365.25*24*60*60*1000;
 
-  return parseInt((Date.now() - birthday) / msInYear);
+	    return parseInt((Date.now() - birthday) / msInYear);
 
-}
+	    }
 
-// calcAge("12 Jan, 1999") => 21
-</code>
+	    // calcAge("12 Jan, 1999") => 21
+	  </code>
 	</pre>
       </div>
 
-      <!--
-	<div class="repo-link">
-	  <a href="https://github.com/makersofkerala/hacktuesday">
+      <div class="repo-link">
+	<a href="https://github.com/makersofkerala/hacktuesday">
 	  <p>Code available for download at</p>
 	  <span>https://github.com/makersofkerala/hacktuesday</span></a>
-	  </div>
-	-->
-	    
-	<div class="social-media-links bottom">
-<header><h2>ഈ പോസ്റ്റ് ഇഷ്ടമായെങ്കിൽ ഫെലോ ഹാക്കേഴ്‌സുമായി പങ്കുവെയ്ക്കൂ</h2></header>
-<ul>
-  <li><a href="https://wa.me/?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%3A%20https%3A%2F%2Fmakersofkerala.now.sh">വാട്ട്സ്ആപ്പ്</a><li>
-  <li><a href="https://www.instagram.com/makersofkerala">ഇൻസ്റ്റാഗ്രാം</a><li>
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://makersofkerala.now.sh">ഫെയ്‌സ്‌ബുക്ക്‌</a><li>
-  <li><a href="https://twitter.com/intent/tweet?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh by @makersofkerala">ട്വിറ്റർ</a><li>
-    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://makersofkerala.now.sh&summary=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82.%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B2%E0%B4%B3%E0%B4%BF%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%20%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D%20%E0%B4%B5%E0%B5%86%E0%B4%AC%E0%B5%8D%E0%B4%AC%E0%B5%8D%20%E0%B4%86%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%B3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%87%E0%B4%B7%E0%B5%BB%20%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%82%20%E2%80%94%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh">ലിങ്ക്ഡിൻ</a></li>
-</ul>
-</div>
+      </div>
+      
+      <div class="social-media-links bottom">
+	<header><h2>ഈ പോസ്റ്റ് ഇഷ്ടമായെങ്കിൽ ഫെലോ ഹാക്കേഴ്‌സുമായി പങ്കുവെയ്ക്കൂ</h2></header>
+	<ul>
+	  <li><a href="whatsapp://send?text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82%20****.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82:%20https://makersofkerala.now.sh">വാട്ട്സ്ആപ്പ്</a></li>
+	  <li><a href="https://www.instagram.com/makersofkerala">ഇൻസ്റ്റാഗ്രാം</a></li>
+	  <li><a href="https://www.facebook.com/sharer.php?u=https://makers-of-kerala.prathyush.now.sh/calculate-age-in-js.html">ഫെയ്‌സ്‌ബുക്ക്‌</a></li>
+	  <li><a href="https://twitter.com/intent/tweet?url=https://makers-of-kerala.prathyush.now.sh/calculate-age-in-js.html&text=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82%20****.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%20%E2%80%94%20@makersofkerala">ട്വിറ്റർ</a></li>
+	  <li><a href="https://www.linkedin.com/shareArticle?url=https://makers-of-kerala.prathyush.now.sh/calculate-age-in-js.html&title=%E0%B4%AA%E0%B5%8A%E0%B4%B3%E0%B4%BF%20%E0%B4%B8%E0%B4%BE%E0%B4%A8%E0%B4%82%20****.%20%E0%B4%9C%E0%B4%BE%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%86%E0%B4%A8%E0%B5%86%20%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%82%20%E0%B4%97%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82%20%E2%80%94%20@makersofkerala">ലിങ്ക്ഡിൻ</a></li>
+	</ul>
+      </div>
 
-	<div id="subscriptions">
-<header><h2>ഇനി വരാൻ പോകുന്ന പോസ്റ്റുകൾ ഉടനടി ലഭിക്കാനായി <a class="telegram-broadcast" href="https://t.me/makersofkerala">മേക്കേഴ്‌സ് ബ്രോഡ്‌ക്കാസ്റ്റ്</a>വരിക്കാരാവുക</h2></header>
-	  </div>
+      <div id="subscriptions">
+	<header><h2>ഇനി വരാൻ പോകുന്ന പോസ്റ്റുകൾ ഉടനടി ലഭിക്കാനായി <a class="telegram-broadcast" href="https://t.me/makersofkerala">മേക്കേഴ്‌സ് ബ്രോഡ്‌ക്കാസ്റ്റ്</a>വരിക്കാരാവുക</h2></header>
+      </div>
 
-	<div id="distribution-count"><p>ഈ പോസ്റ്റ് ഇതുവരെ <span class="counter">1</span> തവണ വിതരണം ചെയ്തു.</p></div>
+      <div id="distribution-count"><p>ഈ പോസ്റ്റ് ഇതുവരെ <span class="counter">1</span> തവണ വിതരണം ചെയ്തു.</p></div>
 
     </article>
     <footer>&copy; Makers of Kerala. 2020</footer>
