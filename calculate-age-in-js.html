@@ -26,6 +26,7 @@
   <body>
     <header id="main-header">
       <h1>Makers of Kerala</h1>
+      <a href="https://twitter.com/makersofkerala">@makersofkerala</a>
     </header>
     <article>
       <header class="title"><h2>ജാവാസ്ക്രിപ്റ്റിലെങ്ങെനെ പ്രായം ഗണിക്കാം</h2></header>
@@ -68,16 +69,20 @@
 	<div class="bubble code">
 	  <div class="code">
 	    <pre><code>
-		const calcAge = (dateString) => {
 
-		const birthday = new Date(dateString).getTime();
+// ജന്മ തിയ്യതി ആയിരിക്കണം ഇൻപുട്ട്
+const calcAge = (dateString) => {
 
-		const msInYear = 365.25*24*60*60*1000;
+  //ഇത് ഇന്നത്തെ തീയതിയുടെ മില്ലിസെക്കന്റുകൾ തരും
+  const birthday = new Date(dateString).getTime();
 
-		return parseInt((Date.now() - birthday) / msInYear);
+  // ഒരു വർഷത്തിലെ മില്ലിസെക്കന്റുകൾ
+  const msInYear = 365.25*24*60*60*1000;
 
-		}
-	      </code>
+  // ഇതാണ് വയസ്സ് ഗണിക്കുന്ന ഫങ്ങ്ഷൻ
+  return parseInt((Date.now() - birthday) / msInYear);
+
+}</code>
 	    </pre>
 	  </div>
 	  <div class="text">ആദ്യം ഇങ്ങനെ ഫങ്ങ്ഷൻ ഡിക്ലയർ ചെയ്യണം.</div>
@@ -131,19 +136,17 @@
 	  <span></span>
 	</div>
 	<pre>
-	  <code>
-	    const calcAge = (dateString) => {
+<code>const calcAge = (dateString) => {
 
-	    const birthday = new Date(dateString).getTime();
+  const birthday = new Date(dateString).getTime();
 
-	    const msInYear = 365.25*24*60*60*1000;
+  const msInYear = 365.25*24*60*60*1000;
 
-	    return parseInt((Date.now() - birthday) / msInYear);
+  return parseInt((Date.now() - birthday) / msInYear);
 
-	    }
+}
 
-	    // calcAge("12 Jan, 1999") => 21
-	  </code>
+// calcAge("12 Jan, 1999") => 21</code>
 	</pre>
       </div>
 
@@ -152,6 +155,11 @@
 	  <p>Code available for download at</p>
 	  <span>https://github.com/makersofkerala/hacktuesday</span></a>
       </div>
+
+      <div id="acknowledgements">
+	<p>ഈ പോസ്റ്റിന്റെ ഡിസൈനിലേക്കു വിലപ്പെട്ട നിർദേശങ്ങൾ
+	തന്ന <a href="https://athulcyriac.co/">അതുൽ
+	സിറിയാക്കിനും</a> <a href="https://iamgks.com/">ഗോപികൃഷ്ണനും</a> <a href="http://jithinsha.in/">ജിതിൻ ഷായ്ക്കും</a> നന്ദി!</p></div>
       
       <div class="social-media-links bottom">
 	<header><h2>ഈ പോസ്റ്റ് ഇഷ്ടമായെങ്കിൽ ഫെലോ ഹാക്കേഴ്‌സുമായി പങ്കുവെയ്ക്കൂ</h2></header>
