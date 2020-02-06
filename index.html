@@ -1,8 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1">
+  <meta name="description" content="Makers of Kerala is a community uniting makers of all across Kerala">
+  <meta name="og:title" content="Makers of Kerala">
+  <meta name="og:description" content="Makers of Kerala is a community uniting makers of all across Kerala">
+  <meta property="og:site_name" content="Makers of Kerala">
+  <meta property="og:url" content="https://makers-of-kerala.now.sh/">
+  <meta name="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|IBM+Plex+Sans:400,400i&display=swap" rel="stylesheet">
   <title>Makers of Kerala</title>
+  <link href="./main.css" type="text/css" rel="stylesheet" />
   <body>
-    <p>Welcome!</p>
+    <header id="main-header">
+      <div id="branding">
+	<img src="./makers-of-kerala-logo.svg" alt="Makers of Kerala Logo" />
+	<h1>Makers <em>of</em> <strong>Kerala</strong></h1>
+      </div>
+      <p>Uniting makers all across Kerala. Stay in the loop, follow us
+      on <a href="https://twitter.com/makersofkerala">Twitter</a>
+      and <a href="https://instagram.com/makersofkerala">Instagram</a></p>
+    </header>
+    <nav>
+      <ul>
+
+	<li><a class="blog-link" href="#"><img src="./blog.svg" alt="Blog Icon"><p>Blog</p></a></li>
+	<li><a class="events-link" href="#coming-soon"><img src="./events.svg" alt="Events Icon"><p>Events</p></a></li>
+      </ul>
+    </nav>
+
+    <div id="reach-out">
+    <p>Interested in contributing an article for Malayali makers?</p>
+    <a id="reach-out-link" href="mailto:makersofkerala@gmail.com">Reach Out</a>
+    </div>
+    <div id="entries">
+
+	<a href="./calculate-age-in-js.html" class="entry">
+	<div class="entry-details">
+	  <p class="small-text">Creating a simple frontend application</p>
+	  <h2>Calculate Age in Javascript</h2>
+	  <div class="entry-metadata">
+	    <time>2 Feb 2020</time>
+	    <p class="author">Editor</p>
+	  </div>
+	</div>
+      </a>
+
+	<a href="#coming-soon" class="entry coming-soon">
+	<div class="entry-details">
+	  <p class="small-text">Creating a simple frontend application</p>
+	  <h2>Setting up your dev environment</h2>
+	  <div class="entry-metadata">
+	    <time>Coming Soon</time>
+	    <p class="author">Editor</p>
+	  </div>
+	</div>
+      </a>
+    </div>
+    <footer>
+      <div id="logo-with-copyright">
+	<img src="./makers-of-kerala-logo-light.svg" alt="Makers of
+	Kerala logo light variant" />
+	<p>&copy; Makers of Kerala 2020</p>
+      </div>
+      <ul>
+	<li><a href="#">Blog</a></li>
+	<li><a href="#coming-soon">Events</a></li>
+      </ul>
+    </footer>
     <script type="module" src="analytics.js"></script>
   </body>
 </html>
