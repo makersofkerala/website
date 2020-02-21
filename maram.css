@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Baloo Chettan", sans-serif;
+}
+
+#view {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-items: stretch;
+}
+
+header {
+
+    background: #79CF81;
+    color: white;
+    padding: 1rem;
+    
+}
+
+header h1 {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.125rem;
+}
+
+nav {
+
+    background: linear-gradient(180deg, #84D18B 0%, #6FC777 100%), #43A94D;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.05), inset 0px 1px 2px rgba(255, 255, 255, 0.45);
+    padding: 0.5rem;
+    font-size: 1rem;
+
+
+}
+
+.code-and-schema {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    font-family: "Fira Code", monospace;
+}
+
+.code {
+    background: #202546;
+    color: white;
+    height: 100%;
+    padding: 1rem;
+    outline: 0;
+    border: 0;
+    font-size: 1rem;
+}
+
+.schema {
+    background: white;
+    color: #202546;
+    padding: 1rem;
+}
+
+nav ul li {
+
+    background: #FAFAFB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05), inset 0px -1px 2px rgba(110, 199, 119, 0.5);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    
+}
+
+.node {
+    padding-left: 1rem;
+}
