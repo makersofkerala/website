@@ -57,6 +57,7 @@ nav {
     outline: 0;
     border: 0;
     font-size: 1rem;
+    font: inherit;
 }
 
 .schema {
