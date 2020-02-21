@@ -20,7 +20,7 @@
 <meta property="twitter:image" content="https://makers-of-kerala.now.sh/calculate-age-in-js-meta-card.png">
   <title>Makers of Kerala - Javascriptilengane praayam ganikkaam</title>
   <link rel="stylesheet" type="text/css" href="calculate-age-in-js-styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Fira+Mono&display=swap" rel="stylesheet">
   <body>
     <header id="main-header">
       <h1>Makers of Kerala</h1>
@@ -69,13 +69,17 @@
 	<div class="bubble code">
 	  <div class="code">
 	    <pre><code>
+// Janma thiyathi aayirikkanam input
 const calcAge = (dateString) => {
 
-const birthday = new Date(dateString).getTime();
+  // Ithu innathe thiyathiyude millisecond tharum
+  const birthday = new Date(dateString).getTime();
 
-const msInYear = 365.25*24*60*60*1000;
+  // Oru varshathile millisecondugal
+  const msInYear = 365.25*24*60*60*1000;
 
-return parseInt((Date.now() - birthday) / msInYear);
+  // Ithanu vayassu ganikkunna function
+  return parseInt((Date.now() - birthday) / msInYear);
 
 }
 	      </code>
@@ -135,7 +139,7 @@ return parseInt((Date.now() - birthday) / msInYear);
 	  <span></span>
 	</div>
 	<pre>
-	  <code>const calcAge = (dateString) => {
+<code>const calcAge = (dateString) => {
 
   const birthday = new Date(dateString).getTime();
 

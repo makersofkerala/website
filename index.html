@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Makers of Kerala is a community uniting makers of all across Kerala">
   <meta name="og:title" content="Makers of Kerala">
   <meta name="og:description" content="Makers of Kerala is a community uniting makers of all across Kerala">
   <meta property="og:site_name" content="Makers of Kerala">
   <meta property="og:url" content="https://makers-of-kerala.now.sh/">
   <meta name="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|IBM+Plex+Sans:400,400i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|IBM+Plex+Mono:400,400i&display=swap" rel="stylesheet">
   <title>Makers of Kerala</title>
   <link href="./main.css" type="text/css" rel="stylesheet" />
   <body>
@@ -23,9 +24,8 @@
     </header>
     <nav>
       <ul>
-
-	<li><a class="blog-link" href="#"><img src="./blog.svg" alt="Blog Icon"><p>Blog</p></a></li>
-	<li><a class="events-link" href="#coming-soon"><img src="./events.svg" alt="Events Icon"><p>Events</p></a></li>
+	<li><a class="blog-link" href="/"><img src="./blog.svg" alt="Blog Icon"><p>Blog</p></a></li>
+	<li><a class="events-link" href="#"><img src="./events.svg" alt="Events Icon"><p>Events</p></a></li>
       </ul>
     </nav>
 
@@ -34,8 +34,10 @@
     <a id="reach-out-link" href="mailto:makersofkerala@gmail.com">Reach Out</a>
     </div>
     <div id="entries">
-
-	<a href="./calculate-age-in-js.html" class="entry">
+	<a href="./calculate-age-in-js.html" class="entry calculate-age-in-js">
+	  <div class="image-container">
+	  <img src="./calculate-age-in-js-cover.png" alt="Calculate Age in Javascript cover" />
+	  </div>
 	<div class="entry-details">
 	  <p class="small-text">Creating a simple frontend application</p>
 	  <h2>Calculate Age in Javascript</h2>
@@ -46,12 +48,15 @@
 	</div>
       </a>
 
-	<a href="#coming-soon" class="entry coming-soon">
+	<a href="#coming-soon" class="entry setting-up-your-dev-environment coming-soon">
+	  <div class="image-container">
+	  <img src="./setting-up-your-dev-environment-cover.png" alt="Setting up your dev environment cover" />
+	  </div>
 	<div class="entry-details">
 	  <p class="small-text">Creating a simple frontend application</p>
 	  <h2>Setting up your dev environment</h2>
 	  <div class="entry-metadata">
-	    <time>Coming Soon</time>
+	    <time>Coming Up Next</time>
 	    <p class="author">Editor</p>
 	  </div>
 	</div>
@@ -71,4 +76,3 @@
     <script type="module" src="analytics.js"></script>
   </body>
 </html>
-

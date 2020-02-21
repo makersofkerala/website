@@ -25,6 +25,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     width: 100%;
+    min-width: 300px;
     padding: 2rem;
     padding-bottom: 0;
     flex-wrap: wrap;
@@ -75,9 +76,9 @@ body {
 
 nav {
     font-weight: 500;
-    margin: 2rem 0;
+    margin: 2rem auto;
     width: 100%;
-
+    min-width: 300px;
 }
 
 nav ul {
@@ -149,8 +150,8 @@ nav a img {
 
     background: linear-gradient(180deg, rgba(154, 222, 161, 0.3) 0%, rgba(36, 173, 49, 0.3) 100%), #5BCE66;
     box-shadow: 0px 1px 2px rgba(14, 109, 23, 0.4), inset 0px 1px 1px rgba(255, 255, 255, 0.45), inset 0px 0px 0px 1px #3A9B43;
-    border-radius: 8px 8px 8px 0;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     padding: 1rem;
     color: white;
@@ -166,39 +167,66 @@ nav a img {
 }
 
 #reach-out-link:active {
-background: linear-gradient(180deg, rgba(36, 173, 49, 0.3) 0%, rgba(154, 222, 161, 0.3) 100%), #5BCE66;
-box-shadow: 0px 1px 1px #FFFFFF, inset 0px 1px 2px rgba(0, 0, 0, 0.4);
-text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(180deg, rgba(36, 173, 49, 0.3) 0%, rgba(154, 222, 161, 0.3) 100%), #5BCE66;
+    box-shadow: 0px 1px 1px #FFFFFF, inset 0px 1px 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
     
 }
 
 
 #entries {
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
+    grid-gap: 20px 20px;
     margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    max-width: 960px;
+    flex-wrap: wrap;
 }
 
 .entry {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 1rem 0rem;
+    padding: 0.5rem 0.75rem;
     text-decoration: none;
     color: #244180;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFB 100%);
+    box-shadow: 0px 1px 2px rgba(48, 93, 168, 0.4);
+    border-radius: 8px;
 }
 
 .coming-soon {
     opacity: 0.5;
 }
 
-.entry img {
-
-    background: #244180;
-    display: block;
+.entry .image-container {
+    overflow: hidden;
+    border-radius: 4px;
+    min-width: 80px;
     width: 80px;
     height: 80px;
-    flex: 0 0 auto;
-    margin-right: 2rem;
+    margin-right: 1rem;
+}
+
+.entry img {
+    mix-blend-mode: screen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+}
+
+.entry.calculate-age-in-js .image-container {
+
+    background: #5B459C;
+    
+}
+
+.setting-up-your-dev-environment .image-container {
+
+    background: #23589F;
     
 }
 
@@ -206,17 +234,17 @@ text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
     font-family: "IBM Plex Mono", monospace;
     display: flex;
     flex-flow: column;
-    margin: 1rem 0;
 }
 
 .entry-details h2 {
     font-family: "Work Sans", "Avenir Next", Avenir, sans-serif;
     text-decoration: underline;
     padding: 0.25rem 0 0.5rem 0;
+    font-size: 1.25rem;
 }
 
 .entry-details .small-text {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
 }
 
 .entry-metadata {
@@ -242,6 +270,8 @@ footer {
     color: white;
     box-sizing: border-box;
     width: 100%;
+    min-width: 300px;
+    margin: 0 auto;
     margin-top: auto;
     flex-wrap: wrap-reverse;
     
@@ -285,3 +315,383 @@ footer li:last-child a {
     margin: 0;
 }
 
+#this-weeks-events {
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 100%;
+}
+
+#upcoming-events {
+    
+    width: 100%;
+    min-width: 300px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#upcoming-events header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#upcoming-events .see-all-button {
+    
+    background: #4650BF;
+    box-shadow: 0px 2px 2px rgba(102, 124, 202, 0.4);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    padding: 0.5rem 1rem;
+
+}
+
+#todays-events > header h2,
+#this-weeks-events > header h2,
+#upcoming-events > header h2 {
+    color: #4650BF;
+    font-weight: normal;
+    font-size: 1.875rem;
+}
+
+#todays-events > header h2,
+#this-weeks-events > header h2 {
+    
+    margin-bottom: 1.5rem;
+
+}
+
+article#events {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#events-page {
+    
+    width: 100%;
+}
+
+#next-events {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+#todays-events {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#todays-events > header {
+    align-self: flex-start;
+}
+
+.square-cards {
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#events-page a {
+    text-decoration: none;
+}
+
+.square-event-card img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.square-event-card {
+    overflow: hidden;
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 1px 2px rgba(48, 93, 168, 0.4);
+}
+
+.square-event-card .event-details {
+    color: #244180;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFB 100%), #FFFFFF;
+    position: relative;
+    top: -10px;
+    z-index: 10;
+    padding: 1rem;
+    box-sizing: border-box;
+
+
+}
+
+.small-event-card {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFB 100%), #FFFFFF;
+    padding: 0.5rem;
+    box-shadow: 0px 1px 2px rgba(48, 93, 168, 0.4);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: auto minmax(200px, 1fr);
+    color: #4650BF;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.small-event-card .event-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 1rem;
+    justify-content: space-between;
+}
+
+.small-event-card .event-details .title {
+    padding-right: 1rem;
+    margin-right: 2rem;
+}
+
+.small-event-card time, .small-event-card .venue, .small-event-card .remaining-time {
+    font-size: 0.875rem;
+    padding: 0.25rem 0;
+    margin-right: 1rem;
+}
+
+.small-event-card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.small-event-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    margin-right: 1rem;
+}
+
+.square-event-card .event-details header h2 {
+    color: #4650BF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#add-an-event {
+    
+    border: 2px solid rgba(63, 122, 220, 0.1);
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+#add-an-event a:hover {
+    background: #414CBE;
+}
+
+#add-an-event a:active {
+
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%), #4650BF;
+box-shadow: 0px 0px 2px rgba(102, 124, 202, 0.4);
+
+
+}
+
+#add-an-event p {
+
+    font-size: 1.5rem;
+    color: #4650BF;
+    margin: 1rem;
+
+}
+
+#add-an-event a {
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 1rem;
+    color: #F9FBFC;
+    background: #4650BF;
+    box-shadow: 0px 2px 2px rgba(102, 124, 202, 0.4);
+    border-radius: 5px;
+    margin: 1rem;
+
+}
+
+#event-page {
+    width: 100%;
+}
+
+#event-page header#main {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#event-page img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+#event-page .title-and-button {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.book-tickets {
+
+    background: #4650BF;
+    box-shadow: 0px 2.12473px 2.12473px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: white;
+    margin-top: 0.5rem;
+
+}
+
+#event-page #main .title {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+#event-page #main  {
+    position: relative;
+}
+
+#event-page #main h2, #event-page #main .remaining-time {
+    
+    background: #4650BFCC;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    max-width: 300px;
+    overflow-wrap: break-word;
+}
+
+#event-page #main h2 {
+
+    font-size: 2rem;
+    max-width: 800px;
+    
+}
+
+#event-page header .remaining-time {
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+#event-page em {
+
+    background: white;
+    color: #4650BF;
+    font-style: normal;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+
+}
+
+#event-page .event-details h3 {
+
+    font-weight: 500;
+    
+}
+
+#event-page .event-details {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    color: #4650BF;
+
+}
+
+#event-page .description {
+
+    display: flex;
+    flex-flow: row;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02), inset 0px -1px 2px rgba(12, 7, 90, 0.16);
+    border-radius: 8px;
+    padding: 0rem 2rem 2rem 2rem;
+    margin: 1rem 0;
+    color: #4650BF;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    padding-right: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    
+}
+
+#event-page ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    margin-right: 1rem;
+}
+
+#event-page ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+
+#event-page .description p {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#event-page .tags header, #event-page .handles header {
+
+    font-weight: 500;
+    font-size: 0.6rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    
+}
+
+#event-page .tags li:before {
+
+    content: "#";
+    
+}
+
+#event-page .handles li:before {
+
+    content: "@";
+    
+}

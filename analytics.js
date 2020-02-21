@@ -1,4 +1,7 @@
+
 const getPage = () => window.location.pathname;
+
+const getUserAgent = () => navigator.userAgent;
 
 const getIP = async () => {
 
@@ -93,7 +96,7 @@ const logSession = async () => {
 
     if(views) {
 
-	views.textContent = count + "";
+	views.textContent = (count + 1) + "";
 
     }
     
@@ -109,7 +112,7 @@ const logClick = async (id) => {
 
     link.addEventListener("click", e => {
 
-	fetch("/.netlify/functions/clickstream", {method: "post", body: JSON.stringify({page: getPage(), linkId: id, time: new Date().toISOString(), ip})});
+	fetch("/.netlify/functions/clickstream", {method: "post", body: JSON.stringify({page: getPage(), userAgent: getUserAgent(), linkId: id, time: new Date().toISOString(), ip})});
 	
     })
 }
