@@ -50,6 +50,8 @@ const treeWalk = (node) => {
 
     if(node.nodeType === 3) return textNodeView(node);
 
+    if(node.nodeType === 8) return ["div.comment-node", "#comment"];
+
     return ["details.node", {open: true}, ["summary", node.tagName.toLowerCase()], ...[...node.childNodes].map(n => treeWalk(n))];
     
 };
