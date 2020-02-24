@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>Page Preview</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <body>
+    <script type="module">
+      import { body } from "./events.js";
+      import { $, render } from "./zs.js";
+
+      render("body", ["div", ...body({})]);
+
+      </script>
+  </body>
+</html>
+

@@ -545,12 +545,26 @@ box-shadow: 0px 0px 2px rgba(102, 124, 202, 0.4);
 #event-page header#main {
     position: relative;
     margin-bottom: 1rem;
+    min-height: 200px;
 }
 
-#event-page img {
+#event-page #cover {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
+    border-radius: 4px;
+}
+
+#event-page #cover.title-letter {
+    background: white;
+    color: steelblue;
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    min-height: 420px;
+    justify-content: center;
+    flex: 1 0 auto;
+    
 }
 
 #event-page .title-and-button {
