@@ -74,17 +74,21 @@ article header p {
 #lang-chooser ul {
     display: flex;
     align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 #lang-chooser ul a {
-    padding: 1rem 2rem;
+
+    padding: 1rem 1.5rem;
     margin: 0.5rem;
+    border: 2px solid #FABC02CC;
     display: flex;
     align-items: center;
-    border: 2px solid #FABC02CC;
- border-radius: 5px;
- box-sizing: border-box;
- height: 4rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 4rem;
+
 }
 
 #lang-chooser .active {
@@ -100,7 +104,9 @@ article section {
 }
 
 article section img {
-    max-width: 100%;
+    max-width: 600px;
+    width: 100%;
+    display: block;
     border-radius: 8px;
 }
 
@@ -139,5 +145,85 @@ article section p {
     padding: 0.5rem 0;
     font-size: 1.125rem;
     line-height: 1.625rem;
+    
+}
+
+
+.big-link {
+    display: block;
+    margin: 0.5rem 0;
+    color: #FABC02;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+article section a {
+    text-decoration: underline;
+    color: #FABC02;
+}
+
+#share-section {
+    
+    margin: 2rem 0;
+}
+
+#share-section p {
+    font-size: 1.5rem;
+}
+
+#share-links {
+    list-style: none;
+}
+
+#share-links a {
+    display: block;
+    font-size: 1.25rem;
+    width: 100%;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #FABC0288;
+    color: #FABC02;
+}
+
+#share-links a:hover {
+    background: #FABC02;
+    color: #06092D;
+}
+
+#maker-broadcast {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+#maker-broadcast a {
+    
+    background: #5B459C;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #DFDFDF;
+}
+
+#vaaku2vec-icon {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+footer {
+    background: #244180;
+    color: #F9FBFC;
+    padding: 2rem 1rem;
+}
+
+.social-media {
+
+    display: flex;
+    flex-flow: row;
+    list-style: none;
     
 }

@@ -1,5 +1,7 @@
 import { doc, render } from "./zs.js";
 import { formatPageName } from "./utils/url.js";
+import { daysRemaining, formatDate } from "./utils/date.js";
+
 
 const squareCard = ({cover, url="#", title, venue, description}) =>
       ["a.square-event-card", {href: "/events/" + formatPageName(title)},
@@ -9,21 +11,24 @@ const squareCard = ({cover, url="#", title, venue, description}) =>
 	["p.venue", venue],
 	["p.description", description]]];
 
-const smallEventCard = ({title, cover, venue, date}) =>
+const smallEventCard = ({title, cover, venue, startDate, endDate, startTime, endTime}) =>
       ["a.small-event-card", {href: "/events/" + formatPageName(title)},
        ["img", {src: cover, alt: "Image for " + title}],
        ["div.event-details",
 	["header", ["h2.title", title]],
 	["p.venue", venue],
-	["time", date],
-	["p.remaining-time", 3 + " days more"]]];
+	["time.date", formatDate(startDate)],
+	startTime ? ["time", startTime + " - " + endTime] : "",
+	["p.remaining-time", daysRemaining(startDate) + " days more"]]];
 
-const thisWeeksEvents = evts => ["section#this-weeks-events",
+const thisWeeksEvents = events => ["section#this-weeks-events",
 				 ["header", ["h2", "This Week"]],
-				 ...evts.map(e => smallEventCard(e))];
+				 ...(events.length === 0 ? [["p.no-events", "No events this week"]] :
+				     events.map(e => smallEventCard(e)))];
 
 const todaysEventsView = (events) => ["section#todays-events",
 				      ["header", ["h2", "Today"]],
+				      events.length === 0 ? ["p.no-events", "No events today"] :
 				      ["div.square-cards", ...events.map(e => squareCard(e))]];
 
 const upcomingEventView = (e) => smallEventCard(e);

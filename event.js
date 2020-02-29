@@ -1,23 +1,28 @@
 import { doc, render } from "./z.js";
+import { daysRemaining, formatDate } from "./utils/date.js";
 
-const eventView = ({title, cover, url, fees, description, venue, date, time, hashtags = [], social = []}) =>
+const eventView = ({title, cover, url, fees, description, venue, startDate, time, hashtags = [], social = []}) =>
       ["div#event-page",
        ["header#main",
 	cover ? ["img#cover", {src: cover, alt: "Image for " + title }] : ["div#cover.title-letter", title.split(" ").reduce((i,n) => i + (isNaN(parseInt(n)) ? n[0] : n), "")],
 	["div.title-and-button",
 	 ["div.title",
 	  ["h2", ["em", (fees == 0 ? "Free" : "Paid")], title],
-	  ["div.remaining-time", "3 days to go"]],
+	  ["div.remaining-time", daysRemaining(startDate) + " days to go"]],
 	 ["a.book-tickets", {href: url}, "Book Tickets"]]],
 	["div.event-details",
 
 	 ["div.item",
 	  ["h3", "Date"],
-	 ["div.value", date]],
+	  ["div.value", formatDate(startDate)]],
 
 	 ["div.item",
 	  ["h3", "Time"],
 	  ["div.value", time]],
+
+	 ["div.item",
+	  ["h3", "Fees"],
+	  ["div.value", "₹ " + fees]],
 
 	 ["div.item",
 	  ["h3", "Venue"],

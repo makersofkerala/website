@@ -4,9 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Let us meet Vaaku2Vec!</title>
 <meta name="title" content="Let us meet Vaaku2Vec!">
-<meta name="description" content="Blogpost on introducing Vaaku2Vec - the state of the art
-				  language modelling and text
-				  classification in Malayalam">
+<meta name="description" content="Blogpost on introducing Vaaku2Vec - the state of the art language modelling and text classification in Malayalam">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -34,13 +32,12 @@
 
       <header>
 	<h3>Lets meet</h3>
-	<h2>Vaaku2Vec</h2>
-	<p>State-of-the-Art Language Modelling and Text Classification in Malayalam Language</p>
+	<h2>Vaaku2Vec</h2> <p>State-of-the-Art Language Modelling and Text Classification in Malayalam Language</p>
 	</header>
       <div id="lang-chooser">
 	<p>Choose your language:</p>
       <ul>
-	<li><a href="./vaaku2vec.html">Malayalam</a></li>
+	<li><a href="./vaaku2vec.html">മലയാളം</a></li>
 	<li><a href="./vaaku2vec-mg.html">🐒lish</a></li>
 	<li><a class="active" href="#">English</a></li>
 	</ul>
@@ -48,83 +45,143 @@
 
       <section>
       <header><h2>What is Vaaku2Vec?</h2></header>
-      <p>Vaak2Vec is a word embedding library written for Malayalam. It performs text classification and language modelling in Malayalam.</p>
+      <figure id="vaaku2vec-icon">
+	<img src="vaaku2vec-icon.png" alt="Vaaku2Vec Icon" />
+	<figcaption>Vaaku2Vec Logo</figcaption>
+      </figure>
+      <p>Vaaku2Vec is a word embedding library used for language modelling and text classification.</p>
       </section>
 
       <section>
-      <header><h2>Word Emb... Say What?</h2></header>
+      <header><h2>Word Emb... say what?</h2></header>
+      <figure>
+	<img src="word-to-vec.svg" alt="Word to Vec" />
+	<figcaption>Converting words to vector</figcaption>
+      </figure>
       <p>
-	Word Embedding is a dimensionality reduction technique in
-	artificial intelligence. By studying the context in which the
-	words are used, it quantifies this information and reduces it
-	down to vector data. The algorithm does this by studying the
-	position in which a word is embedded.
+	Word embedding is a technique for creating artificial intelligence.
+	By studying the context in which the words are used, it
+	quantifies this information and reduces it down to vector
+	data. Along with the context, other parameters are also
+	included in generating the data structures.</p>
+      <p>In the sentence: <em>&ldquo;റിച്ചു എയർ ഗൺ അൺബോക്സ് ചെയ്തു&rdquo;</em>
+	the word &ldquo;എയർ ഗൺ&rdquo; comes between റിച്ചു and അൺബോക്‌സ്. This information is used by the computer for future use cases.</p>
 
-      </p>
-      <p>
-	In the sentence:
-	"Newton sat down near the Apple tree."
-	Apple is embedded between the and tree.
-	The algorithm studies such embeddings and generates a vector
-	notation from it. In some sense, it is a numerical representation  of the multidimensional word space structures.</p>
+      <figure>
+	<img src="word-scan.svg" alt="Word to Vec" />
+	<figcaption>Scanning the words in a sentence</figcaption>
+      </figure>
       </section>
 
       <section>
-	<header><h2>Okay... that was complex, but I think I get a hang
-	of it. Where do we use this?</h2></header>
-	<p>The vector data so developed can aid in a number of use
-	cases. Amazon recommendations can find the related products
-	this way. Siri, Google Assistant, Alexa, Google Translate, or
-	even smartphone keyboard with next-word prediction, then
-	chances are you’ve benefitted from this idea that has become
-	central to Natural Language Processing models. Google search
-	can use it to find out the related products. Unsurprisingly the original paper came out of the research labs in Google.</p>
-	</section>
+	<header><h2>Okay... that was complex, but I think I get a hang of it. Where do we use this?</h2></header>
+	
+	<p>Data thus acquired finds their use in various ways. When browsing
+	  Amazon, the related items that are presented in the bottom
+	  is produced in this manner. Voice assistants such as Siri,
+	  Alexa, the next word suggestions on your smartphone&rsquo;s keyboard are all
+	  places where Word2Vec have found their application.</p>
+
+      <figure>
+	<img src="autocorrect.svg" alt="Autocorrect Poli Saanam" />
+	<figcaption>Autocorrect</figcaption>
+      </figure>
+	<p>On reading this, if Google search came to your mind, your
+	  thought is in the correct lane. Google labs is where this
+	  originated.</p>
+      </section>
 
       <section>
-	<header><h2>Oh interesting! Who is behind this?</h2></header>
+	<header><h2>Neat! Who built it?</h2></header>
+
+      <figure>
+	<img src="word2vec-original-paper.png" alt="Word2Vec original paper" />
+	<figcaption>Word2vec original paper</figcaption>
+      </figure>
 	<p>
-	  Unsurprisingly the original paper came out of the research
-	  labs in Google. The original word2vec was made by:
-	  Refer paper and originators
+	  Unsurprisingly, Google labs research is where it
+	  originated. Tomas Mikolov and team wrote this paper in
+	  2013. This is the paper:
+<a class="big-link" href="https://arxiv.org/abs/1310.4546">Distributed
+  Representations of Words and Phrases and their Compositionality (2013)</a>
 	</p>
-	<p>But our own Vaaku2Vec was developed by Adam
-	Shamsudeen. They have been making it better for the past 4
-	years.</p>
+	<p>Vaaku2Vec addressed in this blogpost is built
+	  by <a href="https://github.com/kamalkraj">Kamal K Raj</a>
+	  and <a href="https://twitter.com/adamshamsudeen">Adam Shamsudeen</a>. They are members of <a href="">IndicNLP</a>. 2019 is when this paper was written.</p>
+
+      <figure>
+	<img src="mmade-puligal.png" alt="Mmade puligal" />
+	<figcaption>&rsquo;മ്മടെ പുലികൾ</figcaption>
+      </figure>
+
+      <section>
+	<header><h2>Wait, so if there's Word2Vec why Vaaku2Vec?</h2></header>
+	<p>
+	  As it says in the Github repo of Vaaku2Vec, Malayalam is a
+	  highly inflective and agglutinative language. That is:</p>
+
+<p>ഇത് (this) + ആണ്‌ (is) in Malayalam is: ഇതാണ് (this is)</p>
+
+<p>In order to work in accordance with it, it is important that the
+  algorithms are restructured. This is why Vaaku2Vec exists. Moreover,
+  Vaaku2Vec has been tested  on a good amount of datasets in order to
+  improve the accuracy of text classification algorithms.</p>
+
 	</section>
 
       <section>
-	<header><h2>But if Word2Vec is there, why Vaaku2Vec?</h2></header>
-	<p>As it says in the bio, Malayalam is an agglutinative
-	language meaning, ithu (this) + aanu (is) = ithaanu (is
-	this). Not two separate words like its English counter part. It is trained in a corpus of Newspaper data</p>
-	</section>
-
-      <section>
-	<header><h2>Cool! Where do I get this?</h2></header>
-	<p>Download from Github</p>
+	<header><h2>Awesome, so where do we download this?</h2></header>
+	<a class="big-link"
+	   href="https://github.com/adamshamsudeen/Vaaku2Vec">Its
+	   available from Github.</a><p>And a
+	   demo is available <a href="http://meain.io/w2vui/">hereb.</a></p>
+      <figure>
+	<img src="vaaku2vec-app.png" alt="Vaaku2Vec app" />
+	<figcaption>Vaak2vec demo</figcaption>
+      </figure>
       </section>
 
       <section>
-	<header><h2>I got it, now what?</h2></header>
-	<p>Start with the suggested projects on the page by making a Github contribution.</p>
-	<p>Continue reading up on this and see if you can find novel
-	use cases. Read this next:</p>
-	<a href="http://jalammar.github.io/illustrated-word2vec/">Illustrated Word2Vec</a>
-	</section>
+	<header><h2>I downloaded it. What next?</h2></header>
+	<p>
+	  First step is to understand what is happening well. For
+	  this, we share a really good article we read explaining Word2Vec:</p>
 
-      <div>
-	<p>If you loved the article, share the article:</p>
+      <figure>
+	<img src="illustrated-word2vec.png" alt="Illustrated word2vec" />
+	<figcaption>Illustrated word2vec website</figcaption>
+      </figure>
+
+	<a class="big-link" href="http://jalammar.github.io/illustrated-word2vec/">Illustrated Word2Vec</a>
+	<p>
+	  Once you understand this, if you get novel ideas, pursue
+	  them or you can also contribute to any of the tasks
+	  mentioned in the project's<a href="https://github.com/adamshamsudeen/Vaaku2Vec#TODO">TODO</a> section.</p> </section>
+
+      <div id="share-section">
+	<p>If you liked the post, share it on social media:</p>
+	<ul id="share-links">
+	  <li><a href="tg://msg_url?url=https://makers-of-kerala.now.sh/blog/vaaku2vec-en.html&text=Check%20out%20this%20post%20on%20Vaaku2Vec%20in%20English">Send it via Telegram</a></li>
+	  <li><a href="https://wa.me/?text=Check%20out%20this%20post%20on%20Vaaku2Vec%20in%20English%20https://makers-of-kerala.now.sh/blog/vaaku2vec-en.html">Share on Whatsapp</a></li>
+	  <li><a href="https://www.facebook.com/sharer.php?u=https://makers-of-kerala.now.sh/blog/vaaku2vec-en.html">Send to people on Facebook</a></li>
+	  <li><a href="https://twitter.com/intent/tweet?url=https://makers-of-kerala.now.sh/blog/vaaku2vec-en.html&text=Check%20out%20this%20post%20on%20Vaaku2Vec%20in%20English&via=makersofkerala">Share with Twitter followers</a></li>
+	  <li><a href="">Share as an Instagram story</a></li>
+	  </ul>
       </div>
 
-      <div>
-	<p>For staying in the loop, subscribe to</p>
-	<a href="">Maker Broadcast</a>
-      </div>
+      <div id="maker-broadcast">
+	<p>ഇത്തരത്തിലുള്ള വാർത്തകൾ ഉടനടി
+	അറിയാൻ <a href="https://t.me/makersofkerala">മേക്കർ
+	ബ്രോഡ്കാസ്റ്റ്</a> സബ്സ്ക്ക്രൈബ് ചെയ്യുക</p></div>
 
     </article>
 
-    <footer>&copy; Makers of Kerala. 2020</footer>
+    <footer>
+      <img src="/makers-logo.svg" alt="Makers of Kerala Logo" />
+      <h2>Makers of Kerala</h2>
+      <p>&copy; 2020. All Right Reserved</p>
+    </footer>
+
     <script type="module" src="/analytics.js"></script>
   </body>
 </html>
