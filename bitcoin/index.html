@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Makers of Kerala Research: Bitcoin Paper Visualized">
+  <meta name="description" content="A visual guide to bitcoin by Makers Of Kerala">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://makers-of-kerala.com/bitcoin/">
+  <meta property="og:title" content="Makers of Kerala Research: Bitcoin Paper Visualized">
+  <meta property="og:description" content="A visual guide to bitcoin by Makers Of Kerala">
+  <meta property="og:image" content="https://makers-of-kerala.com/bitcoin/card.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://makers-of-kerala.com/bitcoin/">
+  <meta property="twitter:title" content="Makers of Kerala Research: Bitcoin Paper Visualized">
+  <meta property="twitter:description" content="A visual guide to bitcoin by Makers of Kerala">
+  <meta property="twitter:image" content="https://makers-of-kerala.com/bitcoin/card.png">
+
+  <meta charset="utf-8" />
+  <title>Makers of Kerala: Bitcoin</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+  <style type="text/css" media="screen">
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    font-family: "IBM Plex Sans", sans-serif;
+    }
+
+    header-component::part(container) {
+  background: #6E5BE5;
+    color: white;
+    padding: 1rem;
+    }
+
+    #headers {
+    background: #6E5BE5;
+    }
+
+  </style>
+
+  <body>
+    <div id="headers">
+    <header-component></header-component>
+    <site-header></site-header>
+    </div>
+  </body>
+  <script type="module">
+
+    import { SocialLinks } from "./social-links.js";
+    import { Header as MakersOfKeralaHeader } from "./header.js";
+    import { SiteHeader } from "./site-header.js";
+
+
+    customElements.define("social-links", SocialLinks);
+    customElements.define("header-component", MakersOfKeralaHeader);
+    customElements.define("site-header", SiteHeader);
+
+  </script>
+
+  </html>

@@ -1,50 +1,940 @@
 <!DOCTYPE html>
 <html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Makers of Kerala: Tech Communities">
+  <meta name="description" content="A curated collection of active tech communities in Kerala">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://makers-of-kerala.now.sh/communities">
+  <meta property="og:title" content="Makers of Kerala: Tech Communities">
+  <meta property="og:description" content="A curated collection of tech communities in Kerala">
+  <meta property="og:image" content="https://makers-of-kerala.now.sh/img/tech-communities-cover.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://makers-of-kerala.now.sh/communities">
+  <meta property="twitter:title" content="Makers of Kerala: Tech Communities">
+  <meta property="twitter:description" content="A curated collection of tech communities in Kerala">
+  <meta property="twitter:image" content="https://makers-of-kerala.now.sh/img/tech-communities-cover.png">
   <meta charset="utf-8" />
-  <title>MakersOfKerala: Tech Communities of Kerala</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
+  <title>Makers of Kerala: Tech Communities of Kerala</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
     * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     }
 
-body {
+    body {
     font-family: "Inter", Avenir, Helvetica, sans-serif;
     background: #F8FAFC;
+    color: white;
     display: flex;
     flex-flow: column;
     align-items: center;
+    background: linear-gradient(180deg, #1A0435 0%, #300960 100%), #C4C4C4;
+    min-height: 100vh;
+    max-width: 1080px;
+    margin: 0 auto;
+    }
+
+    #main-header {
+    display: flex;
+    flex-flow: row;
     padding: 2rem;
-}
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    }
 
-#notification {
-    padding: 2rem;
-}
+    #main-header h1 {
+    font-size: 1.5rem;
+    }
+
+    #main-header em, #page-header em {
+    font-family: "Baskerville", serif;
+    font-weight: normal;
+    padding-right: 0.125rem;
+    }
+
+    #main-header a {
+    margin-left: auto;
+    color: white;
+    }
+
+    #page-header {
+    
+    display: flex;
+    align-self: flex-start;
+    flex-flow: column;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    }
+
+    #page-header p {
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+    max-width: 400px;
+    line-height: 1.5rem;
+    opacity: 0.75;
+    }
+
+    #page-header h2 {
+    width: 300px;
+    font-size: 3rem;
+    font-weight: 400;
+    }
+
+    #page-header strong {
+    font-weight: bold;
+    display: block;
+    }
+
+    article {
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+    }
+
+    section header {
+
+    background: #4E97C7;
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-shadow: 0px -1px 2px rgba(0, 0, 0, 0.125);
+    font-size: 0.85rem;
+    
+    }
+
+    #distribution-count {
+    font-size: 0.75rem;
+    margin: 2rem 0;
+    }
+
+    footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin: 2rem 0 2rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+
+    #social-media {
+    
+    padding: 1rem 0;
+
+    }
+
+    #social-media ul {
+
+    list-style: none;
+    
+    }
+
+    #social-media p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    }
+
+    #social-media a {
+    color: #30BEFA;
+    }
+
+    #social-media ul {
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    }
+
+    #social-media li  {
+    margin: 0 0.5rem;
+    }
+
+    #social-media li:first-child {
+    margin-left: 0;
+    }
+
+    #social-media li:last-child {
+    margin-right: 0;
+    }
 
 
-    </style>
+  </style>
   <body>
     <header id="main-header">
-    <h1>Makers of Kerala</h1>
-    <a href="https://instagram.com/makersofkerala">@makersofkerala</a></p>
-    </header>
-    <p id="notification">We are collecting the list of communities and their links. Stay tuned!</p>
+      <h1><a href="/">Makers <em>of</em> Kerala</a></h1>
+      <a href="https://instagram.com/makersofkerala">@makersofkerala</a></p>
+</header>
+<header id="page-header">
+  <h2><strong>Tech Communities</strong> <em>of</em> Kerala</h2>
+  <p>A curated collection of the best tech communities in
+    Kerala. The communities are grouped under categories in which
+    they primarily focus on delivering value.</p>
+</header>
+
+<article>
+  <div>
+    <group-view color="#4E97C7" text="Programming Languages">
+
+      <community-view>
+	<h2 slot="title">KeralaJS</h2>
+	<img slot="logo" src="/img/keralajs-logo.png" alt="KeralaJS Logo">
+	<div class="links" slot="links">
+	  <link-view href="https://keralajs.org/" label="Website"></link-view>
+	  <link-view href="https://www.facebook.com/groups/167550890111124/" label="Facebook"></link-view>
+	  <link-view href="https://t.me/keralajs" label="Telegram"></link-view>
+	  <link-view href="https://github.com/KeralaJS" label="Github"></link-view>
+	</div>
+	<p slot="description">
+	  KeralaJS is a JavaScript user group and developer community from God's own country. Our goal is to *be* the platform for JavaScript and front-end developers to connect, network and share their experiences. We'll have monthly meetups and occational events mainly focusing on JavaScript and different front-end technologies. Developers, JavaScript enthusiasts and Students are welcome!
+	</p>
+      </community-view>
+
+      <community-view>
+	<h2 slot="title">FlutterKerala</h2>
+	<img slot="logo" src="/img/flutterkerala-logo.svg" alt="FlutterKerala Logo">
+	<div class="links" slot="links">
+	  <link-view href="https://twitter.com/flutterkerala" label="Twitter"></link-view>
+	  <link-view href="https://t.me/flutterkeralaofficial" label="Telegram"></link-view>
+	  <link-view href="https://github.com/flutterkerala" label="Github"></link-view>
+	</div>
+	<p slot="description">
+	  FlutterKerala is a community uniting Flutter devs all across Kerala. FlutterKerala features the best open source projects done in Flutter by its members on its Github account. Come join the most passionate Flutter programmers in Kerala!
+	</p>
+      </community-view>
+
+      <community-view>
+	<h2 slot="title">KeralaRuby</h2>
+	<img slot="logo" src="/img/keralaruby-logo.jpg" alt="KeralaRuby Logo">
+	<div class="links" slot="links">
+	  <link-view href="https://krug.github.io/" label="Website"></link-view>
+	  <link-view href="https://twitter.com/keralarb" label="Twitter"></link-view>
+	  <link-view href="https://t.me/keralarb" label="Telegram"></link-view>
+	  <link-view href="https://github.com/krug" label="Github"></link-view>
+	</div>
+	<p slot="description">
+	  Kerala Ruby user group is the local user group of Ruby developers in the state of Kerala in India. We have regular meet up in Kochi, India. We also encourage meet up and activities in other cities in Kerala as well.
+
+	  The purpose of this group is to spread awareness of Ruby and encourage people to do more Open Source in the state of Kerala, India.
+	</p>
+      </community-view>
+
+      <community-view>
+	<h2 slot="title">KochiPython</h2>
+	<img slot="logo" src="/img/kochipython-logo.jpg" alt="KochiPython Logo">
+	<div class="links" slot="links">
+	  <link-view href="https://t.me/kochipython" label="Telegram"></link-view>
+	</div>
+	<p slot="description">KochiPython is a community of Python Developers focused on sharing knowledge of Python.</p>
+      </community-view>
+
+    <community-view>
+      <h2 slot="title">Kerala Rustaceans</h2>
+      <img slot="logo" src="/img/keralarustaceans-logo.jpg" alt="Kerala Rustaceans Logo">
+      <div class="links" slot="links">
+	<link-view href="https://community.mozilla.org/groups/kerala-rustaceans/" label="Website"></link-view>
+	<link-view href="https://t.me/keralars" label="Telegram"></link-view>
+	<link-view href="https://github.com/keralars" label="Github"></link-view>
+
+      </div>
+      <p slot="description">A Rust enthusiast meet-up community, we love to do stuff with rust-lang and show it off to the rest of us!</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">Kerala Developers</h2>
+      <img slot="logo" src="/img/keraladevelopers-logo.jpg" alt="KeralaDevelopers Logo">
+      <div class="links" slot="links">
+	<link-view href="https://t.me/keraladevelopers" label="Telegram"></link-view>
+      </div>
+      <p slot="description">Kerala Developers is a community discuss
+	programming related topics.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">Kerala Java User Group</h2>
+      <img slot="logo" src="/img/kjug-logo.png" alt="KJUG Logo">
+      <div class="links" slot="links">
+	<link-view href="https://www.keralajug.org/" label="Website"></link-view>
+	<link-view href="https://t.me/keralajug" label="Telegram"></link-view>
+	<link-view href="https://github.com/keralajug" label="Github"></link-view>
+	<link-view href="https://fb.com/KeralaJUG" label="Facebook"></link-view>
+
+      </div>
+      <p slot="description">KJUG is a community of passionate Java
+      Developers Enthusiasts and Students from all parts of
+      Kerala. They hope to create a flourishing community in Kerala. The primary motto of KeralaJUG is sharing knowledge and building a collaborative culture to develop high quality Java Developers with strong base and ability to do almost anything.</p>
+    </community-view>
+
+</group-view>
+
+<group-view color="#6B83C2" text="Company Centric">
+  
+  <community-view>
+    <h2 slot="title">GDG Kozhikode</h2>
+    <img slot="logo" src="/img/gdg-logo.png" alt="GDG Logo">
+    <div class="links" slot="links">
+      <link-view href="https://gdgkozhikode.org/" label="Website"></link-view>
+      <link-view href="https://t.me/gdgkozhikode" label="Telegram"></link-view>
+    </div>
+    <p slot="description">Google Developers Group Kozhikode is an initiative to concentrate the efforts of many developers in and around Kerala to learn, share and get productive using the various Google products.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">GDG Cochin</h2>
+    <img slot="logo" src="/img/gdg-logo.png" alt="GDG Logo">
+    <div class="links" slot="links">
+      <link-view href="http://gdgcochin.org/" label="Website"></link-view>
+      <link-view href="https://twitter.com/GDGCochin" label="Twitter"></link-view>
+      <link-view href="https://t.me/GDGCochin" label="Telegram"></link-view>
+    </div>
+    <p slot="description">GDG Cochin is the second GDG in Kerala, India which is a group of enthusiast developers who came together to share and spread knowledge. We primarily focus on Google's and other open source technologies. Disclaimer: GDG Cochin is an independent group; our activities and the opinions expressed here should in no way be linked to Google, the corporation.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">GDG Thiruvananthapuram</h2>
+    <img slot="logo" src="/img/gdg-logo.png" alt="GDG Logo">
+    <div class="links" slot="links">
+      <link-view href="https://www.gdgtvpm.org/" label="Website"></link-view>
+      <link-view href="https://www.facebook.com/gdgtvpm/" label="Facebook"></link-view>
+      <link-view href="https://twitter.com/gdgtvpm" label="Twitter"></link-view>
+    </div>
+    <p slot="description">Google Developers Group Kozhikode is an initiative to concentrate the efforts of many developers in and around Kerala to learn, share and get productive using the various Google products.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Hacksters</h2>
+    <img slot="logo" src="/img/hacksters-logo.jpg" alt="Hacksters Logo">
+    <div class="links" slot="links">
+      <link-view href="http://hackster.io/" label="Website"></link-view>
+      <link-view href="https://www.facebook.com/HacksterKerala/" label="Facebook"></link-view>
+      <link-view href="https://twitter.com/hacksterkerala" label="Twitter"></link-view>
+    </div>
+    <p slot="description">Kerala Chapter of Hackster. Hackster is one
+      of the world's largest hardware and software developer network with 1.5M+ developers and 20K+ open source projects. </p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Facebook Dev Circle Kochi</h2>
+    <img slot="logo" src="/img/fdc-logo.png" alt="FDC Logo">
+    <div class="links" slot="links">
+      <link-view href="https://www.facebook.com/groups/DevCKochi/" label="Facebook"></link-view>
+    </div>
+    <p slot="description">A forum for developers in Kochi, India and its surroundings who are interested in building on the Facebook platform to interact and collaborate other developers who share similar interests.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Facebook Dev Circle TVM</h2>
+    <img slot="logo" src="/img/fdc-logo.png" alt="FDC Logo">
+    <div class="links" slot="links">
+      <link-view href="https://www.facebook.com/groups/DevCTRV/" label="Facebook"></link-view>
+    </div>
+    <p slot="description">A forum for developers in Trivandrum, Kerala, who are interested in building something using technology and want to collaborate with other developers who share similar interests.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Kerala Microsoft User Group</h2>
+    <img slot="logo" src="/img/kmug-logo.png" alt="KMUG Logo">
+    <div class="links" slot="links">
+      <link-view href="https://k-mug.net/" label="Website"></link-view>
+      <link-view href="https://www.facebook.com/groups/teamkmug/" label="Facebook"></link-view>
+      <link-view href="https://twitter.com/k_mug" label="Twitter"></link-view>
+    </div>
+
+    <p slot="description">
+      K-MUG is one of the largest and most experience technical community in India with more than 2 decades of experience in IT Industry, based in Kerala. The community is built by passionate people who has experience spanning in almost all areas of IT Industry.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">AWS User Group Kochi</h2>
+    <img slot="logo" src="/img/awsug-logo.png" alt="AWS User Group Logo">
+    <div class="links" slot="links">
+      <link-view href="https://awsugkochi.in" label="Website"></link-view>
+      <link-view href="https://www.facebook.com/awsugkochi" label="Facebook"></link-view>
+      <link-view href="https://twitter.com/awsugkochi" label="Twitter"></link-view>
+    </div>
+    <p slot="description">
+AWS User Group Kochi (AWSUGKOCHI) is a Kochi based group united by community-led learnings and diversified by the wide variety of tools and technologies closely knit with Amazon Web Services, cloud computing technology, AWS design implementation and servicing, high scalability / performance computing, production use cases of AWS, blockchain, Artificial Intelligence and much more.</p>
+  </community-view>
+
+  <!-- Note to maintainers: Remove this from listing in case more
+  fraudulent practices from Kerala Product Hunt comes to notice. -->
+  <community-view>
+    <h2 slot="title">Kerala Product Hunt</h2>
+    <img slot="logo" src="/img/keralaph-logo.jpg" alt="KeralaPH Logo">
+    <div class="links" slot="links">
+      <link-view href="http://producthunt.com/" label="Website"></link-view>
+      <link-view href="http://twitter.com/KeralaPH" label="Twitter"></link-view>
+
+    </div>
+    <p slot="description">ProductHunt chapter of Kerala. Product Hunt surfaces the best new products, every day. It's a place for product-loving enthusiasts to share and geek out about the latest mobile apps, websites, hardware projects, and tech creations.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Kochi Wordpress Group</h2>
+    <img slot="logo" src="/img/wpkochi-logo.jpg" alt="WP Kochi Logo">
+    <div class="links" slot="links">
+      <link-view href="https://wpkochi.org/" label="Website"></link-view>
+    </div>
+    <p slot="description">
+The WordPress Kochi Meet Up Group, is a group of passionate individuals from different walks of life who use the WordPress software in their daily lives, in different forms. It consists of over 500 members, that includes writers, journalists, software engineers, web developers, entrepreneurs, businessmen, bloggers and more. The group was born in November 2014, and is officially affiliated to the WordPress Foundation based in the US, that oversees the affairs of Open-Source WordPress, and its development. The group conducts meetings, activities, and sessions on a regular basis, to provide awareness on WordPress, to teach people more about developing websites, and web applications using WordPress, and on how WordPress can be a useful tool in their daily lives. The group is working towards translating WordPress to Malayalam, and are the organizers of the inaugural WordCamp Kochi.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Unity User Group</h2>
+    <img slot="logo" src="/img/unity-logo.jpg" alt="Unity logo">
+    <div class="links" slot="links">
+      <link-view href="https://twitter.com/unitytvm" label="Twitter"></link-view>
+    </div>
+    <p slot="description">Trivandrum chapter of Unity User Group.</p>
+  </community-view>
+
+</group-view>
+
+<group-view color="#634E9A" text="Minorities">
+
+
+  <community-view>
+    <h2 slot="title">Oorjja</h2>
+    <img slot="logo" src="/img/oorjja-logo.png" alt="Oorjja Logo">
+    <div class="links" slot="links">
+      <link-view href="https://oorjja.org" label="Website"></link-view>
+      <link-view href="https://www.facebook.com/Oorjja/" label="Facebook"></link-view>
+    </div>
+    <p slot="description">Oorjja is a social enterprise that runs focused programs intended to enable differently abled undergraduate students to acquire the skills necessary to gain employment based on merit and not any reservation or sympathy.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Girlscript Kochi</h2>
+    <img slot="logo" src="/img/girlscriptkochi-logo.jpg"
+	 alt="Girlscript Kochi Logo">
+    <div class="links" slot="links">
+      <link-view href="https://twitter.com/girlscriptkochi" label="Twitter"></link-view>
+      <link-view href="https://instagram.com/girlscriptkochi" label="Instagram"></link-view>
+    </div>
+    <p slot="description">
+      Kerala chapter of Girlscript. Girlscript is India's first and fastest growing tech community of indian origin. It is open for all organisation and supports beginners in technology and programming. We support diversity by reserving 50% seats for  women & LGBTQ+ in all it's programs worldwide.</p>
+
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Pehia</h2>
+    <img slot="logo" src="/img/pehia-logo.png" alt="Pehia Logo">
+    <div class="links" slot="links">
+      <link-view href="https://pehia.org" label="Website"></link-view>
+      <link-view href="https://twitter.com/pehiaorg" label="Twitter"></link-view>
+      <link-view href="https://instagram.com/pehiaorg" label="Instagram"></link-view>
+    </div>
+    <p slot="description">
+      Pehia is a community based non-profit working towards the cause of bridging the gender gap in technology with a primary focus on computer science & programming.</p>
+
+  </community-view>
+
+</group-view>
+
+<group-view color="#7D4E9A" text="Design">
+
+  <community-view>
+    <h2 slot="title">KDCo</h2>
+    <img slot="logo" src="/img/kdco-logo.svg" alt="KDCo Logo">
+    <div class="links" slot="links">
+      <link-view href="https://kdco.info/" label="Website"></link-view>
+      <link-view href="https://www.facebook.com/groups/264660753884778/" label="Facebook"></link-view>
+      <link-view href="https://twitter.com/KDCotweets" label="Twitter"></link-view>
+    </div>
+    <p slot="description">Kerala Designers Collaborative (KDCo) is a collective of Designers, Illustrators, Graphic Artists and other creative professionals from Kerala to facilitate an even platform for discussions, debates and creative collaborations concerning the design discource in Kerala.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Designers of Kerala</h2>
+    <img slot="logo" src="/img/dok-logo.jpg" alt="DOK Logo">
+    <div class="links" slot="links">
+      <link-view href="https://instagram.com/dokerala" label="Instagram"></link-view>
+    </div>
+    <p slot="description">
+      Designers Of Kerala is a community of designers accommodating design of all types with the ongoing mission to empower the design ecosystem for the strengthening of Startup Ecosystem of Kerala. 
+
+      DOK currently is focused on bringing more talent forward in the design sectors of Digital Product design and Interaction design. DOK also is leading the IxDA Kerala chapter along with which we conduct events and meetups to achieve the mission we are driven by.</p>
+  </community-view>
+
+  <community-view>
+    <h2 slot="title">Young Designers Collective</h2>
+    <img slot="logo" src="/img/ydc-logo.jpg" alt="YDC Logo">
+    <div class="links" slot="links">
+      <link-view href="https://forms.gle/icZLck198ec3MwD46" label="Google Form"></link-view>
+    </div>
+    <p slot="description">YoungDesignersCollective is a community of graphic designers and creative designers, as a platform to exhibit their works, get feedbacks, valuable suggestions and have meet-ups to interact and develop the broad network of designers with which everyone could have a greater visibility over the industry, interact with amazing people from various organisations, thus creating opportunity to work on amazing projects which will add value to everyone's work and value for the team.</p>
+  </community-view>
+
+</group-view>
+</div>
+
+
+<div>
+
+  <group-view color="#C93A8E" text="Knowledge Sharing">
+
+    <community-view>
+      <h2 slot="title">FAYA:80</h2>
+      <img slot="logo" src="/img/faya-logo.jpg" alt="Faya Logo">
+      <div class="links" slot="links">
+	<link-view href="https://fayaport80.com/" label="Website"></link-view>
+	<link-view href="https://twitter.com/fayaport80" label="Twitter"></link-view>
+	<link-view href="https://facebook.com/fayaport80/" label="Facebook"></link-view>
+      </div>
+      <p slot="description">FAYA:80 (read FAYA Port 80) is a monthly technology hangout for technology enthusiasts by technology enthusiasts to break the ice, analyse and evaluate emerging trends in technology.
+
+Held on the first Wednesday of the month at the Floor of Madness (FAYA, Technopark, Thiruvananthapuram), the series stands for Free Knowledge Sharing and aims to provide an open platform for entrepreneurs, developers, and technology professionals to keep at par with the latest tools and technologies.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">PapersWeLove</h2>
+      <img slot="logo" src="/img/pwl-logo.jpg" alt="Tinkerhub Logo">
+      <div class="links" slot="links">
+	<link-view href="https://paperswelove.org/" label="Website"></link-view>
+	<link-view href="https://t.me/pwl_kochi" label="Telegram"></link-view>
+      </div>
+      <p slot="description">Papers We Love is a repository of academic computer science papers and a community who loves reading them.</p>
+    </community-view>
+
+    
+   </group-view>
+
+  <group-view color="#BE344D" text="Learning">
+    <community-view>
+      <h2 slot="title">Tinkerhub</h2>
+      <img slot="logo" src="/img/tinkerhub-logo.jpg" alt="Tinkerhub Logo">
+      <div class="links" slot="links">
+	<link-view href="https://tinkerhub.org/" label="Website"></link-view>
+	<link-view href="https://instagram.com/tinkerhub" label="Instagram"></link-view>
+	<link-view href="https://github.com/tinkerhub-org" label="Github"></link-view>
+	<link-view href="https://t.me/tinkerhub" label="Telegram"></link-view>
+      </div>
+      <p slot="description">
+	Tinkerhub’s mission is to empower people by giving them an opportunity to learn emerging technology skill sets which would accelerate innovation within one’s learning path, and make them future ready tech-talents.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">SingularityU</h2>
+      <img slot="logo" src="/img/su-logo.png" alt="SU Logo">
+      <div class="links" slot="links">
+	<link-view href="https://global.su.org/chapters/trivandrum" label="Website"></link-view>
+	<link-view href="https://www.facebook.com/SUtrivandrum/" label="Facebook"></link-view>
+      </div>
+      <p slot="description">
+SingularityU Trivandrum offers a meeting place for alumni, speakers, and the curious to discuss exponential technologies and research how these can be leveraged to address issues locally. It is also for empowering the startups and communities to adopt future technologies in developing their products/forums and gradually developing a pool of professionals from multiple sectors, who share common thoughts which are unique/innovative and can create solutions for identified problems with the implementation of future technologies.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">Kuttycoders</h2>
+      <img slot="logo" src="/img/kuttycoders-logo.jpg" alt="KuttyCoders Logo">
+      <div class="links" slot="links">
+	<link-view href="https://kuttycoders.in/" label="Website"></link-view>
+	<link-view href="https://instagram.com/kuttycoders" label="Instagram"></link-view>
+      </div>
+      <p slot="description">
+	Kuttycoders is a new venture for children with a passion for technology to learn new things and meet new people thereby immersing themselves in a growing community of doers.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">Student Developers Society</h2>
+      <img slot="logo" src="/img/studentdevsoc-logo.jpg" alt="Student Dev Soc Logo">
+      <div class="links" slot="links">
+	<link-view href="https://studevsoc.com/" label="Website"></link-view>
+	<link-view href="https://t.me/studevsoc" label="Telegram"></link-view>
+	<link-view href="https://www.facebook.com/StuDevSoc" label="Facebook"></link-view>
+	<link-view href="https://twitter.com/thisissds" label="Twitter"></link-view>
+	<link-view href="https://www.instagram.com/studevsoc/" label="Instagram"></link-view>
+	<link-view href="https://gitlab.com/studevsoc" label="Gitlab"></link-view>
+      </div>
+
+      <p slot="description">
+Student Developers Society is a community formed with a vision to bridge the gap between students and professionals. The mission is to revolutionize education and prepare the students' industry-ready and achieve professionalism. SDS conducts workshops, interactive sessions, workathons and mini-conferences to achieve this goal. SDS works to shape the students to be ready to face the goals put up by the professional IT world.</p>
+    </community-view>
+
+
+  </group-view>
+
+  <group-view color="#7D4E9A" text="Technology Centric">
+
+    <community-view>
+      <h2 slot="title">Blockchain Interest Group</h2>
+      <img slot="logo" src="/img/blockchaingroup-logo.jpg" alt="Blockchain Group Logo">
+      <div class="links" slot="links">
+	<link-view href="https://twitter.com/big_org" label="Twitter"></link-view>
+      </div>
+      <p slot="description">
+	Consortium of individuals and companies working in decentralisation, blockchain & related technologies.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">Defcon TVM (DC0471)</h2>
+      <img slot="logo" src="/img/defcon-logo.jpg" alt="Defcon Logo">
+      <div class="links" slot="links">
+	<link-view href="https://dc0471.org/" label="Website"></link-view>
+	<link-view href="https://www.facebook.com/dc0471/" label="Facebook"></link-view>
+	<link-view href="https://twitter.com/dc0471" label="Twitter"></link-view>
+      </div>
+      <p slot="description">
+Defcon Trivandrum&rsquo;s mission is to provide opportunities for anyone interested in technology and both the purposeful and unintended application of it. We will welcome people of all ages and all skill levels to participate, dialog, present, collaborate, build, or create anything that galvanizes the imagination.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">OWASP Kerala</h2>
+      <img slot="logo" src="/img/owasp-logo.png" alt="OWASP Logo">
+      <div class="links" slot="links">
+	<link-view href="https://kerala.owasp.org/" label="Website"></link-view>
+	<link-view href="https://www.facebook.com/OWASPKerala" label="Facebook"></link-view>
+	<link-view href="https://twitter.com/OWASP_Kerala" label="Twitter"></link-view>
+	<link-view href="https://github.com/owasp-kerala" label="Github"></link-view>
+      </div>
+      <p slot="description">
+	Open Web Application Security Project Kerala is an open community dedicated to enabling organizations to conceive, develop, acquire, operate, and maintain applications that can be trusted.</p>
+    </community-view>
+
+  </group-view>
+
+  <group-view color="#DE5F5C" text="Hardware">
+    <community-view>
+      <h2 slot="title">Pi Jam Trivandrum</h2>
+      <img slot="logo" src="/img/makergram-logo.png" alt="Makergram Logo">
+      <div class="links" slot="links">
+	<link-view href="http://www.thepijam.org/" label="Website"></link-view>
+      </div>
+      <p slot="description">Pi Jam Foundation is a Non-Profit Organization (Section-8 under Indian Companies Act 2013) established in September 2017. We aim to address the pressing concerns in the Indian system with regards to use of technology in Education.</p>
+    </community-view>
+    
+    <!-- 
+
+    <community-view>
+      <h2 slot="title">Pi Jam Kochi</h2>
+      <img slot="logo" src="/img/makergram-logo.png" alt="Makergram Logo">
+      <div class="links" slot="links">
+	<link-view href="http://www.thepijam.org/" label="Website"></link-view>
+      </div>
+      <p slot="description">Pi Jam Foundation is a Non-Profit Organization (Section-8 under Indian Companies Act 2013) established in September 2017. We aim to address the pressing concerns in the Indian system with regards to use of technology in Education.</p>
+    </community-view>
+    -->
+
+  </group-view>
+
+  <group-view color="#DE8B5C" text="Motion Graphs">
+
+    <community-view>
+      <h2 slot="title">F9Collective</h2>
+      <img slot="logo" src="/img/f9-logo.png" alt="F9Collective Logo">
+      <div class="links" slot="links">
+	<link-view href="https://instagram.com/f9collective" label="Instagram"></link-view>
+      </div>
+      <p slot="description">
+F9 is a motion design community that facilitates meetups for motion designers to come together and exchange ideas. It aims at making it easier for motion designers to flourish in their career by giving them the right exposure, tips, and tricks, ideas and whatever it takes to make their career journey a cakewalk.</p>
+    </community-view>
+  </group-view>
+
+  <group-view color="#59A74C" text="Maker Communities">
+    <community-view>
+      <h2 slot="title">Makergram</h2>
+      <img slot="logo" src="/img/makergram-logo.png" alt="Makergram Logo">
+      <div class="links" slot="links">
+	<link-view href="https://community.makergram.com/" label="Website"></link-view>
+	<link-view href="https://instagram.com/maker_gram" label="Instagram"></link-view>
+      </div>
+      <p slot="description">
+	Makergram is an open community for makers to learn, share and collaborate. Through our platform, we facilitate open space for collaboration and discussion about technologies. We started with a community forum and kept on adding new services to enable makers solve problems by building better products and services.</p>
+    </community-view>
+    
+    <community-view>
+      <h2 slot="title">Foxlab Makerspace</h2>
+      <img slot="logo" src="/img/foxlab-logo.png" alt="Foxlab Logo">
+      <div class="links" slot="links">
+	<link-view href="http://foxlabmakerspace.org/" label="Website"></link-view>
+	<link-view href="https://www.facebook.com/foxlabmakerspace/" label="Facebook"></link-view>
+	<link-view href="https://chat.whatsapp.com/LXvj6CFKQq7KFI8mKNDnH6" label="Whatsapp"></link-view>
+      </div>
+      <p slot="description">Foxlab Makerspace is a non-profit community-based collaborative work space, in which people with shared interests, can gather to work on projects while sharing ideas, equipment, and knowledge. It’s more of the maker mindset of creating something out of nothing and exploring your own interests that are at the core of a makerspace.</p>
+    </community-view>
+
+  </group-view>
+
+  <group-view color="#1F9024" text="Open Source">
+
+    <community-view>
+      <h2 slot="title">സ്വതന്ത്ര മലയാളം കമ്പ്യൂട്ടിങ്ങ്</h2>
+      <img slot="logo" src="/img/smc-logo.png" alt="SMC Logo">
+      <div class="links" slot="links">
+	<link-view href="http://smc.org.in/" label="Website"></link-view>
+	<link-view href="https://www.facebook.com/smcproject" label="Facebook"></link-view>
+	<link-view href="https://twitter.com/smcproject" label="Twitter"></link-view>
+      </div>
+
+      <p slot="description">
+	Swathanthra Malayalam Computing (SMC) is a free software collective engaged in development, localization, standardization and popularization of various Free and Open Source Softwares in Malayalam language.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">FSUG Thrissur</h2>
+      <img slot="logo" src="/img/fsugtcr-logo.jpg" alt="FSUG Logo">
+      <div class="links" slot="links">
+	<link-view href="http://thrissur.fsug.in/" label="Website"></link-view>
+	<link-view href="https://gitlab.com/fsugtcr/fsugtcr.gitlab.io/tree/master" label="Gitlab"></link-view>
+	<link-view href="https://t.me/fsugtcr" label="Telegram"></link-view>
+      </div>
+
+      <p slot="description"> Free Software Community of India is a collective of Free Software (sometimes also called as Open Source Software) users, advocates and developers.
+We maintain communication and collaboration infrastructure for everyone that respects their freedom and privacy. We maintain a list of Free Software communities and offer sub domains of fsug.in or fosscommunity.in. We depend on donations and community manpower to run the infrastructure.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">FSUG Thiruvananthapuram</h2>
+      <img slot="logo" src="/img/fsugtvm-logo.jpg" alt="FSUG Logo">
+      <div class="links" slot="links">
+	<link-view href="https://en.wikipedia.org/wiki/Free_Software_Users_Group,_Thiruvananthapuram" label="Wikipedia"></link-view>
+	<link-view href="https://t.me/fsugtvm" label="Telegram"></link-view>
+      </div>
+
+      <p slot="description"> Free Software Community of India is a collective of Free Software (sometimes also called as Open Source Software) users, advocates and developers.
+We maintain communication and collaboration infrastructure for everyone that respects their freedom and privacy. We maintain a list of Free Software communities and offer sub domains of fsug.in or fosscommunity.in. We depend on donations and community manpower to run the infrastructure.</p>
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">Mozilla Kerala</h2>
+      <img slot="logo" src="/img/mozillakerala-logo.png" alt="Mozilla Kerala Logo">
+      <div class="links" slot="links">
+	<link-view href="https://mozillakerala.com/" label="Website"></link-view>
+	<link-view href="https://t.me/mozilla_kerala" label="Telegram"></link-view>
+	<link-view href="https://www.facebook.com/MozillaKerala/" label="Facebook"></link-view>
+	<link-view href="https://twitter.com/mozillakerala" label="Twitter"></link-view>
+	<link-view href="https://github.com/MozillaKerala" label="Github"></link-view>
+      </div>
+
+      <p slot="description">Mozilla Kerala is a regional community under the global non-profit organization, Mozilla that is founded on the roots of Free & Open Source Software. Mozilla works to promote & develop the web and to make it a better place to be.</p>
+
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">ICFOSS</h2>
+      <img slot="logo" src="/img/icfoss-logo.png" alt="ICFOSS Logo">
+      <div class="links" slot="links">
+	<link-view href="https://icfoss.in/" label="Website"></link-view>
+      </div>
+      <p slot="description">
+ICFOSS is the outcome of a decade of work by Free Software enthusiasts, advocates, developers and supporters in the state of Kerala and outside. Recognizing the strides made by the FOSS community in Kerala, and sensing a need to do more, the Government of Kerala, in 2008, had set up a Committee headed by Prof Rahul De of IIM Bangalore to recommend what further could be done to support the cause of FOSS. Prof De's Committee, after consulting the FOSS Community and its leaders, made several recommendations to the Government of Kerala, of which setting up of a nodal organization for supporting and extending Free Software activities in the state, at the same time linking with communities, developers, groups and institutions abroad. Given the fact software is globalized, it was suggested by the FOSS community that this organization is international in character in order to enable ease of working with FOSS communities that span continents.</p>
+
+    </community-view>
+
+    <community-view>
+      <h2 slot="title">Wikimedians Kerala</h2>
+      <img slot="logo" src="/img/wikimedians-logo.jpg" alt="Wikimedians Kerala Logo">
+      <div class="links" slot="links">
+	<link-view href="https://wikimediakerala.in/" label="Website"></link-view>
+	<link-view href="https://t.me/wikimedianskerala" label="Telegram"></link-view>
+      </div>
+
+      <p slot="description">Wikimedians of Kerala is a group of Wikimedians which work on various wikimedia projects related to Malayalam and other languages. The group is also working with other organizations to promote Malayalam langauge. Anyone can become a member of this group.</p>
+    </community-view>
+  </group-view>
+
+</div>
+
+</article>
+    <p id="distribution-count">Distributed <span class="counter">0</span> times.</p>
+    <footer>
+    <p>&copy; 2020 Makers of Kerala</p>
+    <div id="social-media">
+    <p>Follow us on: </p>
+    <ul>
+    <li><a href="https://twitter.com/makersofkerala">Twitter</a></li>
+    <li><a href="https://instagram.com/makersofkerala">Instagram</a></li>
+    <li><a href="https://facebook.com/makersofkerala">Facebook</a></li>
+    <li><a href="https://t.me/makersofkerala">Telegram</a></li>
+    </ul>
+    </div>
+    </footer>
+
     <script>
+
+      const groupTemplate = document.createElement("template");
+      groupTemplate.innerHTML = `
+      <style>
+:host {
+
+width: 100%;
+
+}
+
+section {
+
+margin: 2rem 0;
+padding: 1rem 0;
+border-bottom: 1px solid #FFF2;
+
+}
+
+header {
+display: inline-block;
+padding: 0.125rem 2rem;
+font-size: 0.75rem;
+border-radius: 8px;
+border: 3px solid white;
+color: white;
+}
+
+	</style>
+
+    <section>
+    <header><h2>Title</h2></header>
+    <slot name="communities"></slot>
+    </section>
+`;
 
       const communityTemplate = document.createElement("template");
       communityTemplate.innerHTML = `
       <style>
+
 :host {
 
+width: 100%;
+
 }
+
+.description {
+font-size: 0.875rem;
+padding: 1rem 0;
+line-height: 1.5rem;
+max-width: min(80%, 400px);
+}
+
+header {
+display: flex;
+flex-flow: row;
+align-items: center;
+}
+
+.image {
+
+width: 80px;
+height: 80px;
+background: #FFF;
+overflow: hidden;
+border-radius: 40px;
+margin-right: 1rem;
+
+}
+
+.image ::slotted(img) {
+
+width: 80px;
+height: 80px;
+display: block;
+overflow: hidden;
+border-radius: 40px;
+
+}
+
+section {
+margin: 2rem 0 3rem 0;
+}
+
 	</style>
-<header><h2></h2></header>
+      <section class="community">
+<header>
+<div class="image"><slot name="logo"></slot></div>
+<slot name="title"><h2>Community Name</h2></slot>
+</header>
+<div class="description"><slot name="description">Community Description</slot></div>
+<slot name="links"></slot>
+</section>
+
+`;
+
+      const linkTemplate = document.createElement("template");
+
+
+      linkTemplate.innerHTML = `
+      <style>
+:host {
+
+
+}
+
+a {
+display: inline-flex;
+text-decoration: none;
+background: #30BEFA;
+padding: 0.5rem 1rem;
+color: white;
+border-radius: 4px;
+margin: 0.25rem;
+}
+
+</style>
+
+<a href="#">Hi</a>
 `;
 
 
+class GroupView extends HTMLElement {
+    constructor () {
+	super();
+	this.attachShadow({mode: "open"});
+	const content = groupTemplate.content.cloneNode(true);
+
+const section = content.querySelector("section");
+
+let children = this.children;
+
+for(let node of children) {
+
+section.appendChild(node.cloneNode(true));
+
+}
+
+	content.querySelector("h2").textContent = this.getAttribute("text");
+	content.querySelector("header").style.borderColor = this.getAttribute("color");
+        this.shadowRoot.appendChild(content);
+    }
+};
+
+customElements.define("group-view", GroupView);
+
+class CommunityView extends HTMLElement {
+    constructor () {
+	super();
+	this.attachShadow({mode: "open"});
+	this.shadowRoot.appendChild(communityTemplate.content.cloneNode(true));
+    }
+};
+
+customElements.define("community-view", CommunityView);
+
+class LinkView extends HTMLElement {
+    constructor () {
+	super();
+	this.attachShadow({mode: "open"});
+	const content = linkTemplate.content.cloneNode(true);
+	content.querySelector("a").textContent = this.getAttribute("label");
+	content.querySelector("a").setAttribute("href", this.getAttribute("href"));
+	this.shadowRoot.appendChild(content);
+    }
+};
+
+customElements.define("link-view", LinkView);
+
+
     </script>
-    <!-- <script type="module" src="components.js"></script> -->
+    <script type="module" src="analytics.js"></script>
   </body>
 </html>
 
