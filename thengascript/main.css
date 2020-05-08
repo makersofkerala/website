@@ -1,0 +1,686 @@
+:root {
+    --brown: #6B473C;
+    --orange: #BF7539;
+    --cream: #FCFBFA;
+    --blue: #5FA4C6;
+    --dark-blue: #0E1C38;
+    --dark-blue: #1C283A;
+}
+
+@font-face {
+  font-family: 'Chempalli';
+  src: url('/fonts/chempalli.ttf')  format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Signika", Avenir, Verdana, sans-serif;
+    font-size: 1rem;
+    color: var(--brown);
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+#main-header {
+    display: flex;
+    max-width: 1200px;
+    grid-gap: 20px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+#main-header nav {
+    margin-left: auto;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+#main-header nav li a {
+    display: block;
+    color: var(--brown);
+    padding: 0rem 2rem;
+}
+
+#main-header nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+#main-header nav li a.download-button {
+
+    background: var(--brown);
+    color: white;
+    padding: 1.25rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+#main-header .logo-title {
+    display: flex;
+    align-items: center;
+}
+
+#main-header .title-group {
+
+    margin: 0 1rem;
+
+}
+
+#main-header .title-group h2 {
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+#main-header .title-group h1 {
+    font-family: "Chempalli", sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+#main-header .title-group a {
+    color: var(--brown);
+}
+
+
+#main-header nav h1 {
+    grid-column: col-start / span 4;
+}
+
+#main-header nav {
+    font-size: 1.25rem;
+}
+
+#main-header .logo {
+    width: 150px;
+}
+
+#intro {
+
+    max-width: 1200px;
+    display: grid;
+    padding: 0 2rem;
+    grid-template-columns: 50% 50%;
+    color: var(--brown);
+    margin: 4rem auto;
+    margin-bottom: 2rem;
+    font-family: "Signika", sans-serif;
+
+}
+
+
+
+#rationale {
+    
+    max-width: 1200px;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+#roadmap h2 {
+    font-size: 2rem;
+}
+
+#roadmap a {
+    color: var(--blue);
+}
+
+#roadmap {
+    max-width: 1200px;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 4rem auto;
+    padding: 0 2rem;
+
+}
+
+#roadmap ul li {
+    padding: 1rem 0;
+    font-size: 1.25rem;
+}
+
+#lexicon ul {
+    list-style: none;
+    padding: 1rem 0.5rem;
+}
+
+#lexicon a {
+    color: var(--orange);
+}
+
+#lexicon .definitions {
+    padding: 4rem 0;
+}
+
+#lexicon .definitions > li:nth-of-type(2n + 1) {
+    background: #F5F4F4;
+}
+
+#lexicon .definitions li ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#community {
+    
+    max-width: 1200px;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 4rem auto;
+    padding: 0 2rem;
+
+}
+
+#community > header h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#community h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--brown);
+}
+
+.contributors-section {
+    margin: 2rem 0;
+}
+
+#community ul {
+    list-style: none;
+}
+
+#community .contributor {
+    
+    font-weight: bold;
+    color: var(--orange);
+    
+}
+
+#community-examples .gist {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.gist-file {
+    height: 100%;
+    margin-right: 10px;
+    flex: 1 1 40%;
+}
+
+#community .contribution h2 {
+    font-size: 1.25rem;
+}
+
+
+#rationale .content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#rationale h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#rationale p {
+    margin: 1rem 0;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+#intro .description {
+    margin-right: 3rem;
+}
+
+#intro .tagline {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tagline .lang {
+    font-weight: bold;
+}
+
+#intro p {
+    line-height: 2rem;
+    font-size: 1.15rem;
+    font-weight: 200;
+}
+
+#intro #sample-editor {
+    box-sizing: border-box;
+    background: var(--brown);
+    color: white;
+}
+
+.buttons {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: row:
+    justify-content: space-between;
+}
+
+.buttons a {
+    display: flex;
+}
+
+#intro .download-button {
+    background: var(--brown);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    margin-right: 1rem;
+    transition: 0.25s ease transform, 0.25s ease box-shadow;
+}
+
+#intro .download-button:hover {
+
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px hsla(0,0%,0%, 0.05);
+}
+
+#intro .demos-button {
+    border: 2px solid #F5F4F4;
+    color: var(--brown);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    transition: 0.25s ease transform, 0.25s ease border;
+}
+
+#intro .demos-button:hover {
+    transform: translateY(-2px);
+    border: 2px solid var(--brown);
+}
+
+#sample-editor .CodeMirror {
+    height: 100%;
+}
+
+#content {
+    background: var(--brown);
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+#docs {
+
+    max-width: 1200px;
+    margin: 2rem auto;
+    font-family: "Signika", sans-serif;
+    padding: 0 2rem;
+}
+
+#docs h2 {
+
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+}
+
+#docs h3 {
+
+    font-weight: normal;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+#usage-blocks {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#usage-blocks a {
+    color: var(--brown);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#usage-blocks pre {
+    font-size: 0.875rem;
+    overflow: scroll;
+}
+
+#usage-blocks em {
+    background: var(--brown);
+    color: white;
+    padding: 0.05rem 0.5rem;
+    font-style: normal;
+}
+
+
+.work-area h2 {
+    padding: 1rem 0 0 1rem;
+    font-family: "Signika", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+
+#docs pre {
+    background:#F0EDEC;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-family: "Fira Code", sans-serif;
+}
+
+.editor-area {
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    margin: 6rem 0;
+    color: var(--brown);
+    font-family: "Monaco", sans-serif;
+    font-size: 0.875rem;
+}
+
+.result {
+
+    flex: 1 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+footer {
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    background: #1A1A34;
+    color: white;
+    width: 100vw;
+    display: flex;
+    flex-flow: row;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#demos .title {
+    font-family: "Signika", sans-serif;
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+.work-area {
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+
+}
+
+.demo-editor {
+    border: 0;
+    width: 100%;
+    background: #f0edeb;
+    padding: 1rem;
+    min-height: 20rem;
+    box-sizing: border-box;
+    background: #F5F4F4;
+
+}
+
+.sample-programs {
+
+    font-family: "Signika", sans-serif;
+    grid-auto-columns: min-content;
+}
+
+.work-area a {
+    color: var(--brown);
+}
+
+.work-area a.selected {
+
+    background: var(--brown);
+    color: white;
+
+}
+
+.sample-programs li a {
+
+    padding: 1rem;
+    padding-left: 2rem;
+    display: block;
+    cursor: pointer;
+    background: white;
+    transition: 0.15s background-color ease;
+
+}
+
+.sample-programs a.selected:hover {
+    background: var(--brown);
+}
+
+.sample-programs li a:hover {
+
+    background: #F5F4F4;
+
+}
+
+
+.demo-area {
+
+    box-shadow: 0 20px 50px hsla(0,0%,0%, 0.05);
+
+}
+
+#reach-out {
+    font-family: "Signika", sans-serif;
+    width: 100vw;
+    color:white;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 auto;
+    background: var(--brown);
+}
+
+#share-buttons{
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+        margin-bottom: 2rem;
+
+}
+
+
+#reach-out p {
+    margin: 1rem;
+}
+
+.call-to-action-en {
+    font-size: 3rem;
+}
+
+ul.social-media {
+    display: flex;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+#share-buttons ul.social-media li a {
+
+    background: var(--brown);
+    color: white;
+    padding: 1.25rem;
+    margin: 0 0.25rem;
+    display: block;
+
+}
+
+ul.social-media li a {
+
+    background: white;
+    color: var(--brown);
+    padding: 1.25rem;
+    margin: 0 0.25rem;
+    display: block;
+
+}
+
+#about-the-project {
+    width: 20rem;
+}
+
+footer .bofa {
+    font-family: "Chempalli", sans-serif;
+    font-size: 1.5rem;
+}
+
+
+footer .makers {
+
+    font-size: 0.875rem;
+
+}
+
+.makers a {
+    color: white;
+    text-decoration: underline;
+}
+
+#about-the-project strong {
+
+    font-family: "Chempalli", sans-serif;
+    font-size: 3rem;
+    display: block;
+
+}
+
+#about-the-project .connector {
+    font-size: 1.2rem;
+    color: steelblue;
+}
+
+#about-the-project em {
+    font-size: 1.25rem;
+    margin: 0 0.25rem;
+    font-weight: medium;
+    font-style: normal;
+}
+
+
+.swadeshi-link {
+    display: flex;
+    flex-flow: row;
+}
+
+#about-the-project a {
+
+    color: #CC471F;
+
+}
+
+#about-the-project small {
+
+    font-size: 1rem;
+    opacity: 0.5;
+
+}
+
+#usage-blocks p {
+
+    padding: 0.5rem 0;
+
+}
+
+@media screen and (max-width: 960px) {
+
+#main-header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#main-header nav {
+    margin: 0;
+}
+
+#main-header .logo-title {
+    margin-bottom: 2rem;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    padding: 0 2rem;
+    margin: 2rem auto;
+}
+
+#intro .description {
+    margin: 0;
+}
+
+#intro .buttons {
+    display: flex;
+    flex-flow: column;
+}
+
+#intro .buttons a {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#demos .work-area {
+    display: flex;
+    flex-flow: column;
+}
+
+#rationale p {
+
+    width: 100%;
+
+}
+
+#rationale .content {
+    display: flex;
+    flex-flow: column;
+}
+
+}
+
+#contributors a {
+    color: var(--brown);
+}

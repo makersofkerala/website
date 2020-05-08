@@ -1,0 +1,16 @@
+* Todos
+
+** Code
+
+*** Build lessons to learn Javascript in Malayalam.
+May be use SCERT material to help figure out the essentials? or should I rely on Flanagan's JS: The Definite Guide?
+
+** Website
+
+*** HTML5 Push State
+    
+*** Sticky Header
+    
+*** Create an animation for the logo
+
+*** Create background image with line art icons
