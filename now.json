@@ -1,0 +1,13 @@
+{
+    "redirects": [
+	{ "source": "/calculate-age-in-js.html", "destination": "/blog/calculate-age-in-js.html" },
+	{ "source": "/calculate-age-in-js-en.html", "destination": "/blog/calculate-age-in-js-en.html" },
+	{ "source": "/calculate-age-in-js-manglish.html", "destination": "/blog/calculate-age-in-js-manglish.html" },
+	{ "source": "/calculate-age-in-js/", "destination": "/blog/calculate-age-in-js.html" },
+	{ "source": "/communities", "destination": "/communities.html" },
+	{ "source": "/thengascript", "destination": "/thengascript/" },
+	{ "source": "/quarantine-vault", "destination": "/quarantine-vault/" },
+	{ "source": "/compilers", "destination": "/compilers.html" }
+    ]
+
+}
