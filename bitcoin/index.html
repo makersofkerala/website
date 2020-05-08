@@ -33,13 +33,63 @@
     }
 
     header-component::part(container) {
-  background: #6E5BE5;
     color: white;
+    background: #6E5BE5;
     padding: 1rem;
     }
 
     #headers {
     background: #6E5BE5;
+    }
+
+    article {
+    padding: 2rem;
+    color: #5540CE;
+    }
+
+    article a {
+    background: #5540CE;
+    display: inline-block;
+    color: white;
+    padding: 0.25rem;
+    }
+
+    article p {
+    padding: 0.5rem 0;
+    line-height: 1.5rem;
+    }
+
+    #qa li {
+    padding: 0.5rem 0;
+    }
+
+    footer {
+    background: #5540CE;
+    background: #6E5BE5;
+    color: white;
+    padding: 2rem;
+    }
+
+    footer a {
+    color: white;
+    }
+
+    footer .social-media {
+    margin: 1rem 0;
+    }
+
+    footer ul {
+    display: flex;
+    list-style: none;
+    }
+
+    footer ul li {
+    margin: 1rem;
+    text-decoration: none;
+    }
+
+    footer li:first-child {
+    margin-left: 0;
     }
 
   </style>
@@ -49,7 +99,82 @@
     <header-component></header-component>
     <site-header></site-header>
     </div>
+    <article>
+      <header>
+      <h2>Reviewing the Original Bitcoin Paper: A First Pass</h2>
+      <h3>30 April 2020</h3>
+      </header>
+      <p>We are taking a 3 pass approach as outlined in
+      <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">Keshav's Paper</a></p>
+      <p>With this approach, you go through paper in three gradual
+      passes, each unfolding the complexity of the paper
+      progressively. Keeping it in separate passes allows you to
+      assess the content in different resolutions: form a
+      gestalt and then progressively refine in on the details.</p>
+
+      <p>Using this approach, we filtered Satoshi Nakomoto's original
+	paper and we produce our assessment here. It is accompanied
+	with answers to the five questions that the first pass is
+	required to produce.</p>
+
+<p>Even on a preliminary read it is clear that the author has
+  concentrated not on the correctness part of engineering or to show
+  a theoretical proof, but was fully oriented towards creating
+  a foundation for a <strong>practical running system</strong>. The <strong>most interesting
+  part</strong> in the paper&rsquo;s abstract highlights the need for creating
+  a body of work that acts as a <strong>long term source of truth</strong>. The place
+  where the largest amount of work has been put forth surely seems
+  like a clever engineering technique at the user experience level. The <strong>leverage of human factors for engineering the system</strong> can be
+  sensed when he lays down observations like the possibility of
+  largest CPU power or the nodes in charge doesn't actively go against
+  the system, as in an auto immune disease. It is clear that the author has looked at this
+  idea from <strong>multiple perspectives</strong> and has come up with a somewhat
+  holistic approach to creating a digital currency. It is a commendable effort put forth from the author in this respect.</p>
+
+
+<ul id="qa">
+  <li><span><strong>Category</strong>: What type of paper is this?</span>
+    <p>P2P Electronic Cash. Bitcoin unlocked a lot of novel areas in the
+    digital finance space.</p></li>
+
+  <li><strong>Context</strong>: Which other papers is it related to? Which theoretical bases
+	were used to analyze the problem?
+    <p>The theoretical basis used to construct it largely seems to be
+    cryptographical papers, P2P networks and economics. It would need
+    a few more passes to unearth the related papers.</p></li>
+
+  <li><strong>Correctness</strong>: Do the assumptions appear to be valid?
+
+    <p>Don't have enough mettle in this area to verify if it is correct.</p></li>
+
+  <li><strong>Contributions</strong>: What are the paper’s main contributions?</span>
+    <p>It has created it's own intellectual tradition and quite a few
+    cryptocoins and exchanges all around the world.</p></li>
+
+
+<li><span><strong>Clarity</strong>: Is the paper well written?</span>
+    <p>Looks like the paper is a short and straight forward read.</p></li>
+
+</ul>
+
+</p>
+
+    </article>
+    <footer>
+    <p>&copy; 2020. All Rights Reserved.</p>
+    <div class="social-media">
+    <p>Follow us on: </p>
+    <ul>
+    <li><a href="https://twitter.com/makersofkerala">Twitter</a></li>
+    <li><a href="https://instagram.com/makersofkerala">Instagram</a></li>
+    <li><a href="https://facebook.com/makersofkerala">Facebook</a></li>
+    <li><a href="https://t.me/makersofkerala">Telegram</a></li>
+    </ul>
+    </div>
+    </footer>
+
   </body>
+    <script type="module" src="analytics.js"></script>
   <script type="module">
 
     import { SocialLinks } from "./social-links.js";

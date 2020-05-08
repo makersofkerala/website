@@ -29,6 +29,7 @@ flex-flow: row;
 flex-wrap: wrap;
 align-items: center;
 justify-content: space-between;
+color: inherit;
 }
 
 social-links {
