@@ -21,13 +21,21 @@ const smallEventCard = ({title, cover, venue, startDate, endDate, startTime, end
 	startTime ? ["time", startTime + " - " + endTime] : "",
 	["p.remaining-time", daysRemaining(startDate) + " days more"]]];
 
+const eventCountLabel = events => {
+
+    let length = events.length;
+
+    return length == 1 ? "1 Event" : length + " events";
+    
+};
+
 const thisWeeksEvents = events => ["section#this-weeks-events",
-				 ["header", ["h2", "This Week"]],
+				   ["header", ["h2", "This Week"], ["p", eventCountLabel(events)]],
 				 ...(events.length === 0 ? [["p.no-events", "No events this week"]] :
 				     events.map(e => smallEventCard(e)))];
 
 const todaysEventsView = (events) => ["section#todays-events",
-				      ["header", ["h2", "Today"]],
+				      ["header", ["h2", "Today"], ["p", eventCountLabel(events)]],
 				      events.length === 0 ? ["p.no-events", "No events today"] :
 				      ["div.square-cards", ...events.map(e => squareCard(e))]];
 
