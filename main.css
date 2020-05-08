@@ -109,6 +109,10 @@ nav .events-link {
     color: #4650BF;
 }
 
+nav .resources-link {
+    color: #79CF81;
+}
+
 nav a {
 
     text-decoration: none;
