@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Makers of Kerala: Resources">
+  <meta name="description" content="Resources for the budding indie maker">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://makers-of-kerala.now.sh/resources">
+  <meta property="og:title" content="Makers of Kerala: Resources">
+  <meta property="og:description" content="Resources for the budding indie maker">
+  <meta property="og:image" content="https://makers-of-kerala.now.sh/img/resources-cover.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://makers-of-kerala.now.sh/resources">
+  <meta property="twitter:title" content="Makers of Kerala: Resources">
+  <meta property="twitter:description" content="Resources for the budding indie maker">
+  <meta property="twitter:image" content="https://makers-of-kerala.now.sh/img/resources-cover.png">
+  <meta charset="utf-8" />
+  <title>Makers of Kerala: Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="./main.css" type="text/css" rel="stylesheet" />
+  <style>
+    #cards {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+    grid-gap: 20px;
+    max-width: 900px;
+    
+    }
+
+    .card {
+    overflow: hidden;
+    max-height: 400px;
+    background: #C4C4C4;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: white;
+    margin: 0;
+
+    }
+
+    .card img {
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+    }
+
+    .card .description {
+    padding: 1rem;
+    }
+
+    .description p {
+    margin: 1rem 0;
+    
+    }
+
+    article {
+    max-width: 960px;
+    margin-bottom: 6rem;
+    }
+
+    article header  {
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    }
+
+    #cards a {
+
+    text-decoration: none;
+    color: inherit;
+    
+    }
+
+  </style>
+
+    <header id="main-header">
+      <div id="branding">
+	<img src="./makers-of-kerala-logo.svg" alt="Makers of Kerala Logo" />
+	<h1>Makers <em>of</em> <strong>Kerala</strong></h1>
+      </div>
+      <p>Uniting makers all across Kerala. Stay in the loop, follow us
+      on <a href="https://twitter.com/makersofkerala">Twitter</a>
+      and <a href="https://instagram.com/makersofkerala">Instagram</a></p>
+    </header>
+    <nav>
+      <ul>
+	<li><a class="blog-link" href="/"><img src="./blog.svg" alt="Blog Icon"><p>Blog</p></a></li>
+<!-- <li><a class="events-link" href="#"><img src="./events.svg" alt="Events Icon"><p>Events</p></a></li> -->
+	<li><a class="resources-link" href="/resources.html"><img src="./resources.svg" alt="Resources Icon" /><p>Resources</p></a></li>
+      </ul>
+    </nav>
+
+
+    <article>
+  <header>
+    <h2>Resources</h2>
+    <p>A collection of resources for the budding maker</p>
+  </header>
+
+  <div id="cards">
+    <a href="/communities.html" class="card">
+      <img src="/img/tech-communities-cover.png" alt="Cover for Tech Communities" />
+      <div class="description">
+      <h2>Awesome Tech Communities</h2>
+      <p>List of awesome tech communities in Kerala</p>
+      </div>
+      </a>
+
+    <a href="/quarantine-vault/" class="card">
+      <img src="/quarantine-vault/quarantine-vault-card.png" alt="Cover for Quarantine vault" />
+      <div class="description">
+      <h2>Quarantine Vault</h2>
+      <p>Catalog of resources for learning during the Corona lockdown</p>
+      </div>
+      </a>
+
+    <a href="/compilers" class="card">
+      <img src="/compilers/compilers-card.png" alt="Cover for compilers" />
+      <div class="description">
+      <h2>Compilers</h2>
+      <p>Resources for learning compiler design and engineering</p>
+      </div>
+      </a>
+
+    </div>
+  </article>
+
+    <footer>
+      <div id="logo-with-copyright">
+	<img src="/makers-of-kerala-logo-light.svg" alt="Makers of
+	Kerala logo light variant" />
+	<p>&copy; Makers of Kerala 2020</p>
+      </div>
+      <ul>
+	<li><a href="#">Blog</a></li>
+      </ul>
+    </footer>
+    <script type="module" src="analytics.js"></script>
+</html>
