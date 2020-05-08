@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Malayali Maker Zine: Kerala's Premier
+			      Maker Magazine">
+  <meta name="description" content="Malayali Maker Zine is Kerala's
+				    Premier Maker Magazine">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://makers-of-kerala.com/zine">
+  <meta property="og:title" content="Malayali Maker Zine: Kerala's Premier
+				     Maker Magazine">
+  <meta property="og:description" content="Malayali Maker Zine is Kerala's
+					   Premier Maker Magazine">
+  <meta property="og:image" content="https://makers-of-kerala.com/zine/zine-card.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://makers-of-kerala.com/zine">
+  <meta property="twitter:title" content="Malayali Maker Zine: Kerala's Premier
+					  Maker Magazine">
+  <meta property="twitter:description" content="Malayali Maker Zine is Kerala's
+						Premier Maker Magazine">
+  <meta property="twitter:image" content="https://makers-of-kerala.com/zine/zine-card.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Makers of Kerala: Malayali Maker Zine</title>
+  <style>
+
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    font-family: "Inter", "Avenir Next", Helvetica, sans-serif;
+    font-size: 1rem;
+    background: linear-gradient(180deg, #25A2C1 0%, #68C9E1 100%);
+    min-height: 100vh;
+    }
+
+    header-component {
+    background: white;
+    color: #29A4C3;
+    }
+
+    social-links {
+    color: #29A4C3;
+    }
+
+    article {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    }
+
+    article header {
+
+    color: white;
+    padding: 4rem 0;
+    padding-bottom: 0rem;
+    
+    }
+
+    article header h2 {
+    font-size: 1.5rem;
+    }
+
+    article header h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    }
+
+    article header img {
+    display: block;
+    margin: 2rem 0;
+    margin-bottom: 0rem;
+    width: 100%;
+    }
+
+    #signup-container {
+    background: white;
+    padding: 2rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    }
+
+    #signup-container > p {
+    flex: 0.75;
+    margin-right: 0.5rem;
+    }
+
+    #signup form {
+    flex: 1;
+    }
+
+    form input {
+    border: 0;
+    background: #EFEFEF;
+    margin: 0.25rem 0;
+    border-radius: 4px;
+    padding: 1rem;
+    font-size: 1rem;
+    }
+
+    form button {
+
+    appearance: none;
+    background: #43CAED;
+    color: white;
+    padding: 1rem;
+    font: inherit;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 4px;
+    
+    }
+
+    footer {
+    color: white;
+    padding: 4rem;
+    }
+
+    footer social-links {
+    color: white;
+    }
+    
+  </style>
+  <body>
+    <header-component></header-component>
+    <article>
+      <header>
+	<h2>Malayali Maker Zine</h2>
+      <h3>Kerala's Premiere Maker Magazine</h3>
+      <img src="/zine/cover.png" alt="Magazine Cover" />
+      
+      </header> 
+
+      <div id="signup-container">
+<p>We are in process of creating the very first issue of our maker
+      magazine. Watch this space for some cool stuff in the coming days!</p>
+      <!-- 
+      <form id="subscribe" method="POST" action="/api/populate">
+<p>Subscribe to get notified of our progress:</p>
+      <input name="email" type="text" placeholder="email@domain.com" />
+      <button type="submit">Subscribe</button>
+      </form>
+-->
+      </div>
+
+    </article>
+    <footer>
+      <p>&copy; Makers of Kerala 2020</p>
+      <social-links></social-links>
+      </footer>
+  </body>
+  <script type="module">
+    import { SocialLinks } from "./social-links.js";
+    import { Header as MakersOfKeralaHeader } from "./header.js";
+    customElements.define("social-links", SocialLinks);
+    customElements.define("header-component", MakersOfKeralaHeader);
+    </script>
+  <script type="module" src="analytics.js"></script>
+</html>
+
