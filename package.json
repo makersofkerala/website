@@ -1,20 +1,21 @@
 {
-    "name": "makers-of-kerala",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "type": "module",
-    "dependencies": {
-	"faunadb": "^2.11.1",
-	"now": "^17.0.2",
-	"serve": "^11.3.0"
-    },
-    "devDependencies": {},
-    "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1",
-	"gen": "node --experimental-modules page-generator.js"
-    },
-    "keywords": [],
-    "author": "Prathyush <prathyushpramod@gmail.com>",
-    "license": "MIT"
+   "name": "makers-of-kerala",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "type": "module",
+   "dependencies": {
+      "faunadb": "^2.11.1",
+      "now": "^17.0.2",
+      "serve": "^11.3.0",
+      "xila": "0.0.18"
+   },
+   "devDependencies": {},
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "gen": "node --experimental-modules page-generator.js"
+   },
+   "keywords": [],
+   "author": "Prathyush <prathyushpramod@gmail.com>",
+   "license": "MIT"
 }

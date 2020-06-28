@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <meta charset="utf-8" />
   <title>Makers of Kerala: Learn to Build Compilers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,16 +12,16 @@
   <meta property="og:url" content="https://makers-of-kerala.com/compilers">
   <meta property="og:title" content="Makers of Kerala: Learn to Build Compilers">
   <meta property="og:description" content="Resources for learning compiler design and engineering">
-  <meta property="og:image" content="https://makers-of-kerala.com/compilers/compilers-card.png?same">
+  <meta property="og:image" content="https://makers-of-kerala.com/compilers/compilers-card.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://makers-of-kerala.com/compilers">
   <meta property="twitter:title" content="Makers of Kerala: Learn to Build Compilers">
   <meta property="twitter:description" content="Resources for learning compiler design and engineering">
-  <meta property="twitter:image" content="https://makers-of-kerala.com/compilers/compilers-card.png?img">
-  <meta charset="utf-8" />
+  <meta property="twitter:image" content="https://makers-of-kerala.com/compilers/compilers-card.png">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
 
     * {
@@ -97,7 +98,6 @@
     #social-media ul {
     display: flex;
     flex-flow: row;
-    align-items: space-between;
     flex-wrap: wrap;
     }
 
@@ -151,8 +151,15 @@ header h2 {
     margin: 2rem 0;
     font-size: 2rem;
 }
+
+
+.share-section {
+margin: 1rem;
+
+}
     
   </style>
+
   <body>
     <header id="main">
       <div id="title">
@@ -166,11 +173,13 @@ header h2 {
 
 	    <div>
 	    <img src="/img/twitter-grey-logo.svg" alt="Twitter Grey Logo" />
-<a href="https://twitter.com/makersofkerala">@makersofkerala</a>
-</div>
+	    <a href="https://twitter.com/makersofkerala">@makersofkerala</a>
+	    </div>
 	    <div>
+
 	    <img src="/img/instagram-grey-logo.svg" alt="Instagram Grey Logo" />
 	    <a href="https://instagram.com/makersofkerala">makersofkerala</a></div>
+
 	</div>
 
 	</div>
@@ -182,37 +191,177 @@ header h2 {
     <p>We are building a <a href="https://webassembly.org/">WebAssembly</a> compiler for a project
       we initiated 2 years ago
       called <a href="/thengascript/">Thengascript</a>, a way to
-      program web applications in Malayalam, our mother tongue.</p>
+      program web applications in Malayalam, our mother tongue. Towards this purpose, we began looking for resources to
+      help us understand the <strong>craft of compiler engineering</strong>. This lead us to a research where we came across some stellar resources and great people working in the domain. Here we present the result of our searches as a
+      a round-up of the great stuff we gathered.</p>
 
-    <p>Towards this purpose, we began looking for resources to
-      help us to understand the <strong>craft of compiler engineering</strong>. This is
-      a round-up of promising resources we collected. We have
-      catalogued them in a way to help a beginner interested in making
-compilers, to proceed <strong>step by step</strong>, to become an expert. If you
-      think we have left out any great resources,
-      please <a href="https://twitter.com/makersofkerala">reach out
-	to us.</a></p>
     <p>Compilers are curious creatures. They take in a language,
       <strong>roughly comprehensible by humans</strong>, as its input and turns it into a
       form <strong>comprehensible by machines</strong>. This translation can happen in
-      a series of steps, each of which can produce an intermediate
-      language with a certain set of good properties. After these whole
-      series of translations is done, something magical happens in the end: it makes <strong>human-computer interaction</strong> possible. If peeking under their hood to understand how things work spark joy when you
-find out, compiler construction could be right up your alley.</p>
+      a single step or a series of steps, each of which can produce an intermediate
+      language with a certain set of good properties. After this
+      transformation is done, something magical happens: it makes <strong>human-computer interaction</strong> possible.</p>
 
-    <p>First of all, we present a roadmap we have used to understand
+    <p>If peeking under their hood to understand how things work spark joy when you
+    find out, compiler construction could be right up your alley. This curation
+    done under the light of our own exploration of literature and media
+    on compilers. We curate the easily accessible ones that form a
+    rough progression as a roadmap and then list general resources that will help you once you have a grounding in the basics. We have 
+    tried to give credit to the people who have made this as they
+    are the real heroes who have dedicated their time and effort to lend their broad shoulders to enable us to build
+    novel things.</p>
+
+    <p>We have catalogued these resources in a way to help a beginner interested in making
+    compilers, to proceed <strong>step by step</strong>, to become an expert. If you
+    think we have left out any great resources,
+    please <a href="https://twitter.com/makersofkerala">reach out to us.</a></p>
+
+
+	<header><h2>Roadmap for Beginners</h2></header>
+
+
+<p>First of all, we present a roadmap we have used to understand
       compilers. The selection here is chosen in a way
-      it <strong>unfolds their complexity, a few steps at a time</strong>. This is
-      done under the light of our own exploration of literature and media
-      on compilers. We curate the easily accessible ones that form a
-      rough progression in their complexity as a list. We have also
-      tried to give credit to the people who have made this as they
-      are the real heroes who have dedicated their time and effort to lend their broad shoulders for building
-      novel things on top of them. This roadmap is followed by a
-      collection of materials, we have compiled by keeping a
-      lookout for relevant materials over the past couple of years.</p>
+      it <strong>unfolds their complexity, a few steps at a time</strong>.</p>
 
-<header><h2>Roadmap for Beginners</h2></header>
+<div id="roadmap"></div>
+
+<div class="share-section">
+  <p>If you liked this roadmap, share it with your friends who would be interested in it. Share via:</p>
+  <div>
+  <a href="https://twitter.com/intent/tweet?url=https://makers-of-kerala.com/compilers.html&text=Learn%20to%20Build%20Compilers!&via=makersofkerala">Twitter</a>
+  <a href="https://wa.me/?text=Learn%20to%20Build%20Compilers!%20https://makers-of-kerala.com/compilers.html">Whatsapp</a>
+  <a href="https://www.facebook.com/sharer.php?u=https://makers-of-kerala.com/compilers.html">Facebook</a>
+  <a href="tg://msg_url?url=https://makers-of-kerala.com/compilers.html&text=Learn%20to%20Build%20Compilers!">Telegram</a>
+  </div>
+</div>
+
+<p>Now if you have completed that roadmap, and you are still
+  interested in learning more about compilers, you are quite likely <strong>someone
+  who is passionate about engineering complex artifacts</strong>. Then a <strong>deep dive into compilers</strong> could be the right thing for
+  you next.</p>
+<p>We have collected here some <strong>high quality resources</strong> that unravel the engineering
+  techniques used for building compilers. Few key things are
+  required to see them through completion: the <strong>headspace to work
+  through these in long stretches of time and the discipline to see
+  the courses through to their end</strong>. By engaging in this meticulous process and making programming languages could
+  just be one of the most fulfilling undertakings you do as an engineer.</p>
+
+<section>
+  <header><h2>Courses</h2></header>
+  <p>Here we list a set of great online courses. We have chosen the ones with accompanying lecture videos so that they are self contained for motivated individuals to learn on their own.</p>
+<course-list></course-list>
+
+</section>
+
+
+<section>
+
+  <header><h2>Blog Series</h2></header>
+
+</section>
+
+<!-- 
+
+<section>
+  <header><h2>Literature</h2></header>
+  <p>These are the courses that we found with videos</p>
+  <ul>
+  <p>These are the courses that we found with videos</p>
+	https://ruslanspivak.com/lsbasi-part1/
+	http://www.buildyourownlisp.com/
+	Compilers in Rust Do a google search
+    <li><a href=""><span>[Introductory]</span> Essentials of Programming Languages</a></li>
+    <li><a href=""><span>[Introductory]</span> Formal Semantics</a></li>
+    <li><a href=""><span>[Introductory]</span> Parsing Techniques</a></li>
+    <li><a href=""><span>[Introductory]</span> Dragon Book</a></li>
+    <li><a href=""><span>[Introductory]</span> Crafting Compilers</a></li>
+    <li><a href=""><span>[Introductory]</span> Crenshaw</a></li>
+    <li><a href=""><span>[Introductory]</span> Read these two articles</a></li>
+  – Andrew W. Appel — «Modern Compiler Implemenation in C»
+   – Keith D. Cooper, Linda Torczon — «Engineering a Compiler»
+   – Richard Bornat — «Understanding and Writing Compilers»
+   – Richard Reese — «Understanding and Using C Pointers»
+Engineering a Compiler by Cooper and Torczon
+   – Terence Parr — «Language Implementation Patterns»
+   – Terence Parr — «The Definitive ANTLR Reference»
+    <li><a href=""><span>[Introductory]</span> Incremental Compilation</a></li>
+https://t3x.org/reload/
+https://www.amazon.com/Compiler-Construction-International-Computer-Science/dp/0201403536
+http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf
+https://legacy.cs.indiana.edu/~dyb/pubs/nano-jfp.pdf
+https://legacy.cs.indiana.edu/~dyb/pubs/commercial-nanopass.pdf
+    https://github.com/namin/inc
+https://github.com/namin/inc
+
+A. Aho, R. Sethi, J. Ullman, Compilers: Principles, Techniques, and Tools. Reading, MA: Addison-Wesley, 1986.  J.P. Bennett, Introduction to Compiling Techniques.  Berkshire, England: McGraw-Hill, 1990. C. Fischer,  R. LeBlanc, Crafting a Compiler. Menlo Park, CA: Benjamin/Cummings, 1988. D. Grune,  H. Bal, C. Jacobs, K. Langendoen, Modern Compiler Design. West Sussex, England: Wiley, 2000. K. Loudon, Compiler Construction.  Boston, MA: PWS, 1997 A. Pyster, Compiler Design and Construction.  New York, NY: Van Nostrand Reinhold, 1988. J. Tremblay, P. Sorenson, The Theory and Practice of Compiler Writing. New York, NY: McGraw-Hill, 1985.
+
+Niklaus Wirth: https://web.archive.org/web/20190228232902/http://www.ethoberon.ethz.ch/WirthPubl/CBEAll.pdf
+https://interpreterbook.com/
+  </ul>
+</section>
+
+<section>
+  <header><h2>Videos</h2></header>
+
+Joel Martin Talk
+https://www.youtube.com/watch?v=jVhupfthTEk
+https://kanaka.github.io/lambdaconf/
+  <p>These are the courses that we found with videos</p>
+  <ul>
+    <li><a href="">Jonathan Blow + Casey Muratori</a></li>
+https://www.youtube.com/watch?v=Os7FE3J-U5Q
+  </ul>
+</section>
+
+<section>
+  <header><h2>Interesting Resources</h2></header>
+
+  <p>These are the courses that we found with videos</p>
+  <ul>
+    <li><a href="">inc compiler by Nada Amin</a></li>
+
+https://crypto.stanford.edu/~blynn/compiler/socrates.html
+    <li><a href="">Jonathan Blow has been writing a compiler for
+
+Modern Compiler Construction Video Series
+https://howistart.org/posts/nim/1/
+https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html
+	Elements of Programming
+	Elements of Computing
+https://github.com/prakhar1989/type-inference
+https://archive.org/details/byte-magazine-1978-09/mode/2up
+https://archive.org/details/byte-magazine-1978-10-rescan/mode/2up
+https://news.ycombinator.com/item?id=17220507
+https://norvig.com/lispy.html
+https://norvig.com/lispy2.html
+https://linker.iecc.com/
+https://www.amazon.com/Advanced-Compiler-Design-Implementation-Muchnick/dp/1558603204
+https://en.wikipedia.org/wiki/Principles_of_Compiler_Design
+
+    <li><a href=""><span>[Introductory]</span> Article by Neel Krishnaswami</a></li>
+    <li><a href="https://crypto.stanford.edu/~blynn/compiler/
+"><span>[Introductory]</span>Compilers for Contrarians</a></li>
+    <li><a href=""><span>[Introductory]</span>Elm Error Messages</a></li>
+  </ul>
+</section>
+
+    
+-->
+
+    <p id="distribution-count"><span class="counter">0</span> views.</p>
+    <footer>
+    <p>&copy; 2020. All Rights Reserved.</p>
+    <div id="social-media">
+    <p>Follow us on: </p>
+    <ul>
+    <li><a href="https://twitter.com/makersofkerala">Twitter</a></li>
+    <li><a href="https://instagram.com/makersofkerala">Instagram</a></li>
+    <li><a href="https://facebook.com/makersofkerala">Facebook</a></li>
+    <li><a href="https://t.me/makersofkerala">Telegram</a></li>
+    </ul>
+    </div>
+    </footer>
 
 <template id="item-list">
   <style>
@@ -316,7 +465,9 @@ header {
   padding-bottom: 0.5rem;
   }
 
+
 </style>
+
 <a href="#">
   <section>
   <header>
@@ -332,172 +483,116 @@ header {
   <p class="description">Lots of content</p>
   </section>
   </a>
+
 </template>
 
-<section id="roadmap"></section>
+<template id="course-component">
 
-<p>
-  If you liked this post, share it with your friends who would like it. Share via:
-  <div>
-  <a href="https://twitter.com/intent/tweet?url=https://makers-of-kerala.com/compilers.html&text=Learn%20to%20Build%20Compilers!&via=makersofkerala">Twitter</a>
-  <a href="https://wa.me/?text=Learn%20to%20Build%20Compilers!%20https://makers-of-kerala.com/compilers.html">Whatsapp</a>
-  <a href="https://www.facebook.com/sharer.php?u=https://makers-of-kerala.com/compilers.html">Facebook</a>
-  <a href="tg://msg_url?url=https://makers-of-kerala.com/compilers.html&text=Learn%20to%20Build%20Compilers!">Telegram</a>
-  </div>
-</p>
+<style>
 
-<!-- 
+  * {
+  margin: 0;
+  padding: 0;
+  }
 
-https://wiki.c2.com/?LittleLanguage
-https://www.youtube.com/watch?v=CZp9IFgFFts
+  :host {
+  color: #303030;
+  max-width: 600px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+  }
 
-https://www.youtube.com/watch?v=G166wZyfR9M
-https://kanaka.github.io/lambdaconf/
+:host:not(:defined) {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+  section {
+
+  background: white;
+  padding: 2rem;
+  display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  line-height: 1.25rem;
+  font-size: 0.925rem;
+  
+  }
+
+  .author {
+  color: #6B60DD;
+  }
+
+  
+  .description {
+      flex: 1 0 240px;
+  padding: 1rem;
+  
+  }
+
+header {
+    flex: 0 1 240px;
+}
+
+  header h2 {
+  max-width: 200px;
+  }
+
+  .cover {
+  display: block;
+  width: 240px;
+  object-fit: cover;
+  position: relative;
+  height: 160px;
+  background: #2F2F2F;
+  }
+
+  .avatar {
+  display: block;
+  background: #2F2F2F;
+  width: 60px;
+  }
+
+  a {
+  color: inherit;
+  text-decoration: none
+  }
+
+  .image-with-titles {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 0.25rem 0;
+  }
+
+  .titles {
+  padding: 0.5rem 1rem;
+  flex-flow: row;
+  }
+
+  .titles h2 {
+  padding-bottom: 0.5rem;
+  }
 
 
-	<li>[Choose one]<a href="">Little Schemer</a> / <a href="https://htdp.org">HtDP</a>.</a>
-<p>Not essential but helps give a thorough in fundamental
-  programming principles and building a rudimentary interpreter.</p>
-</li>
+</style>
 
-https://github.com/jamiebuilds/the-super-tiny-compiler
-<p>Now if you have completed that roadmap, and you are still
-  interested in learning more about it, you are quite likely someone
-  who is intrigued by complex engineering artifacts. Does peeking
-  under their hood to understand how things work spark joy when you
-  find out? Then a deep dive into compilers could be the thing for
-  you. We here curate resources here to unravel the engineering
-  techniques used for building compilers. There is really a rich set
-  of resources available on this out there. Few key things are
-  required to see them through completion: the headspace to work
-  through these in long stretches of time and the discipline to see
-  the courses through to their end. Making programming language could
-  be one of the most fulfilling undertakings as an engineer.</p>
-
+<a href="#">
 <section>
-  <header><h2>Courses</h2></header>
-  <p>These are the courses that we found with videos</p>
-  <ul>
-CS164: Hack Your Language!
-CSE341 - Programming Languages, Dan Grossman, Spring 2013 - University of Washington
-https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-035-computer-language-engineering-sma-5502-fall-2005/lecture-notes/
-https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-035-computer-language-engineering-spring-2010/
-https://twitter.com/pervognsen/status/1253977440810004480
-https://online.stanford.edu/courses/soe-ycscs1-compilers
-https://www.edx.org/course/compilers?source=aw&awc=6798_1586506402_043fd012b8b97abbf7224296849b1420&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=301045_https%3A%2F%2Fwww.class-central.com%2F
-https://www.udacity.com/course/compilers-theory-and-practice--ud168?coupon=UDACAFFIL2020&cjevent=2915a4e17b0311ea830e00880a180510
-
-https://courses.cs.washington.edu/courses/cse341/13sp/
-https://courses.cs.washington.edu/courses/csep501/09au/lectures/video.html
-https://www.youtube.com/playlist?list=PLTPQEx-31JXhfAWGnGzwbfhB2zUB7Jd4C
-https://courses.cs.washington.edu/courses/csep505/15wi/video/
-http://cs.brown.edu/courses/cs173/2012/Videos/
-https://courses.engr.illinois.edu/cs421/fa2014/
-https://www.cs.swarthmore.edu/~jpolitz/cs75/s16/index.html
-http://cs.brown.edu/courses/cs173/2014/
-https://courses.engr.illinois.edu/cs421/fa2014/
-http://matt.might.net/teaching/compilers/spring-2015/
-https://archive.org/details/ucberkeley-webcast-PL3A16CFC42CA6EF4F
-https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about
-
+<header>
+<img class="cover" src="" alt="Cover" />
+<div class="image-with-titles">
+<img class="avatar" src="" alt="Avatar" />
+<div class="titles">
+<h2>Article title</h2>
+<p class="author">Author</p>
+</div>
+</div>
+</header>
+<p class="description">Lots of content</p>
 </section>
-
-<section>
-  <header><h2>Blog Series</h2></header>
-  <p>These are the courses that we found with videos</p>
-
-https://ruslanspivak.com/lsbasi-part1/
-http://www.buildyourownlisp.com/
-</section>
-
-<section>
-  <header><h2>Literature</h2></header>
-  <p>These are the courses that we found with videos</p>
-  <ul>
-    <li><a href=""><span>[Introductory]</span> Essentials of Programming Languages</a></li>
-    <li><a href=""><span>[Introductory]</span> Formal Semantics</a></li>
-    <li><a href=""><span>[Introductory]</span> Parsing Techniques</a></li>
-    <li><a href=""><span>[Introductory]</span> Dragon Book</a></li>
-    <li><a href=""><span>[Introductory]</span> Crafting Compilers</a></li>
-    <li><a href=""><span>[Introductory]</span> Crenshaw</a></li>
-    <li><a href=""><span>[Introductory]</span> Read these two articles</a></li>
-  – Andrew W. Appel — «Modern Compiler Implemenation in C»
-   – Keith D. Cooper, Linda Torczon — «Engineering a Compiler»
-   – Richard Bornat — «Understanding and Writing Compilers»
-   – Richard Reese — «Understanding and Using C Pointers»
-   – Terence Parr — «Language Implementation Patterns»
-   – Terence Parr — «The Definitive ANTLR Reference»
-    <li><a href=""><span>[Introductory]</span> Incremental Compilation</a></li>
-https://t3x.org/reload/
-https://www.amazon.com/Compiler-Construction-International-Computer-Science/dp/0201403536
-http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf
-https://legacy.cs.indiana.edu/~dyb/pubs/nano-jfp.pdf
-https://legacy.cs.indiana.edu/~dyb/pubs/commercial-nanopass.pdf
-    https://github.com/namin/inc
-https://github.com/namin/inc
-
-  Niklaus Wirth: https://web.archive.org/web/20190228232902/http://www.ethoberon.ethz.ch/WirthPubl/CBEAll.pdf
-https://interpreterbook.com/
-  </ul>
-</section>
-
-
-<section>
-  <header><h2>Videos</h2></header>
-  <p>These are the courses that we found with videos</p>
-  <ul>
-    <li><a href="">Jonathan Blow + Casey Muratori</a></li>
-https://www.youtube.com/watch?v=Os7FE3J-U5Q
-  </ul>
-</section>
-
-<section>
-  <header><h2>Interesting Resources</h2></header>
-  <p>These are the courses that we found with videos</p>
-  <ul>
-    <li><a href="">inc compiler by Nada Amin</a></li>
-
-https://crypto.stanford.edu/~blynn/compiler/socrates.html
-    <li><a href="">Jonathan Blow has been writing a compiler for
-
-https://howistart.org/posts/nim/1/
-https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html
-	Elements of Programming
-	Elements of Computing
-https://github.com/prakhar1989/type-inference
-https://archive.org/details/byte-magazine-1978-09/mode/2up
-https://archive.org/details/byte-magazine-1978-10-rescan/mode/2up
-https://news.ycombinator.com/item?id=17220507
-https://norvig.com/lispy.html
-https://norvig.com/lispy2.html
-https://linker.iecc.com/
-https://www.amazon.com/Advanced-Compiler-Design-Implementation-Muchnick/dp/1558603204
-https://en.wikipedia.org/wiki/Principles_of_Compiler_Design
-
-    <li><a href=""><span>[Introductory]</span> Article by Neel Krishnaswami</a></li>
-    <li><a href="https://crypto.stanford.edu/~blynn/compiler/
-"><span>[Introductory]</span>Compilers for Contrarians</a></li>
-    <li><a href=""><span>[Introductory]</span>Elm Error Messages</a></li>
-  </ul>
-</section>
-
-    
--->
-
-    <p id="distribution-count"><span class="counter">0</span> views.</p>
-    <footer>
-    <p>&copy; 2020. All Rights Reserved.</p>
-    <div id="social-media">
-    <p>Follow us on: </p>
-    <ul>
-    <li><a href="https://twitter.com/makersofkerala">Twitter</a></li>
-    <li><a href="https://instagram.com/makersofkerala">Instagram</a></li>
-    <li><a href="https://facebook.com/makersofkerala">Facebook</a></li>
-    <li><a href="https://t.me/makersofkerala">Telegram</a></li>
-    </ul>
-    </div>
-    </footer>
-
+</a>
+</template>
 
 <script>
 
@@ -566,15 +661,134 @@ https://en.wikipedia.org/wiki/Principles_of_Compiler_Design
   
   }
 
+class CourseList extends HTMLElement {
+
+	constructor() {
+
+		super();
+		let shadow = this.attachShadow({mode: "open"});
+		shadow.appendChild(courseListTempate.content.cloneNode(true));
+
+	}
+
+	set items(items) {
+
+		for(let item of items) {
+
+			let element = document.createElement("course-item");
+
+			element.details = item;
+
+			this.shadowRoot.appendChild(element);
+
+		}
+
+	}
+
+}
+
   customElements.define("item-list", List);
 
+  customElements.define("course-list", CourseList);
+
   const componentList = document.createElement("item-list");
+
+  const courseList = document.querySelector("course-list");
 
 componentList.items = [{title: "A Crash Course to Compilers", author: "Ramsey Nassar", itemLink: "https://increment.com/programming-languages/crash-course-in-compilers/", coverImage: "/compilers/crash-course-cover.jpeg", avatarImage: "/compilers/ra-avatar.jpeg", description: "This is a well written and accessible article to understand what compilers are and the function they perform. It goes into detail about what distinguishes an interpreter from a compiler and gives a birds eye view of the compiler landscape."}, {title: "How to be* a compiler", author: "Mariko Kosaka", itemLink: "https://medium.com/@kosamari/how-to-be-a-compiler-make-a-compiler-with-javascript-4a8a13d473b4", coverImage: "/compilers/kosamari-compiler.png", avatarImage: "/compilers/kosamari-avatar.jpg", description: "Once you have an overview of the landscape, a good way to start out is by getting your hands dirty. This article by Mariko helps a beginner to construct a little language to draw pictures in Javascript. This is a good example to get an understanding of how things work under the hood."}, {title: "Transpilers and Compilers", author: "Maggie Appleton", itemLink: "https://illustrated.dev/compilers/", coverImage: "/compilers/compilers-and-transpilers.png", avatarImage: "/compilers/maggie-avatar.png", description: "The talented illustrator, Maggie has made a short and sweet illustrated note on the difference between compilers and interpreters. It's worth a quick dekko to understand the difference between compilers and transpilers. Such clarification of technical terms could really help as you progress in this journey."}, {title: "Little Languages", author: "Jon Bentley", itemLink: "https://web.archive.org/web/20180831010208/https://staff.um.edu.mt/afra1/seminar/little-languages.pdf", coverImage: "/compilers/little-languages-cover.png", avatarImage: "/compilers/jon-bentley-avatar.png", description: "Learning and practicing by delving into papers will become an important technique when working with compilers. This paper by Jon Bentley is an accessible paper that elucidates the idea of building a little language in the Unix ecosystem."},
 		       {title: "The Super Tiny Compiler", author: "Jamie Kyle", itemLink: "https://github.com/jamiebuilds/the-super-tiny-compiler", coverImage: "/compilers/super-tiny-compiler-cover.png", avatarImage: "/compilers/jamie-kyle-avatar.png", description: "This is a tiny compiler written in Javascript by Jamie Kyle that touches the main concepts of modern compiler construction. It is super tiny to read, pick apart, and understand the kind of techniques that go into constructing a compiler."},
 		       {title: "Make a Lisp", author: "Joel Martin", itemLink: "https://github.com/kanaka/mal", coverImage: "/compilers/mal-cover.png", avatarImage: "/compilers/joel-martin-avatar.png", description: "Once you have understood and got a general feel for how compilers work, a really good resource at this point to explore would be Make a Lisp by Joel Martin. It is a repo where Lisp is implemented in 80+ lanugages replete with illustrations guiding you in each step of creating Lisp from scratch."},
 		       {title: "Crafting Interpreters", author: "Bob Nystrom", itemLink: "https://craftinginterpreters.com/", coverImage: "/compilers/crafting-interpreters-cover.png", avatarImage: "/compilers/bob-nystorm-avatar.jpg", name: "", description: "Now with all that knowledge you have gleaned, you would be more than qualified to start learning this book by Bob Nystorm. It introduces most concepts you have learned in the previous resources and gives an overarching idea of how they all fit together to make the magic happen."},
 		      ]; 
+
+/*
+courseList.items = [{title: "CSE341 - Programming Languages, Dan Grossman, Spring 2013 - University of Washington",
+instructors: ["Dan Grossman"],
+courseCover: "",
+institution: "University of Washington",
+institutionLogo: "",
+description: "This is a good introduction to the basic concepts underlying popular programming languages. There is only an exercise pertaining directly to compiler construction in this, but it is well worth a watch to understand how programming languages differ in their conceptual structures.",
+links: [{archive: "https://courses.cs.washington.edu/courses/cse341/13sp/"}]},
+
+{title: "CSEP501"
+instructors: ["Alex Aiken"],
+courseCover: "",
+institution: "Stanford",
+institutionLogo: "",
+description: "In this course, you will learn principles and practices for design and implementation of compilers and interpreters. Topics covered include: lexical analysis; parsing theory; symbol tables; type systems; scope; semantic analysis; intermediate representations; runtime environments; code generation; and basic program analysis and optimization. Students will construct a compiler for a simple object-oriented language during the course's programming projects.",
+links: [{archive: "https://courses.cs.washington.edu/courses/csep501/09au/lectures/video.html", videos: "https://www.youtube.com/playlist?list=PLTPQEx-31JXhfAWGnGzwbfhB2zUB7Jd4C"}]},
+
+{title: ""
+instructors: ["Alex Aiken"],
+courseCover: "",
+institution: "Stanford",
+institutionLogo: "",
+description: "In this course, you will learn principles and practices for design and implementation of compilers and interpreters. Topics covered include: lexical analysis; parsing theory; symbol tables; type systems; scope; semantic analysis; intermediate representations; runtime environments; code generation; and basic program analysis and optimization. Students will construct a compiler for a simple object-oriented language during the course's programming projects.",
+links: [{main: "https://www.edx.org/course/compilers", archive: "http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=Compilers"}]},
+
+{title: "CS164: Hack Your Language!",
+instructors: ["Ras Bodik", "Alvin Cheung"],
+description: "Introduction to what programmers need to know about programming languages and their implementations. You will design and implement small languages, called domain-specific languages (DSLs), which are the glue of the complex software that we write today. You will also learn about principles and implementation of large, general-purpose languages and about how to exploit modern features of these languages. As the final project, you will get to design and implement a small language of your choice, from start to finish.",
+links: ""},
+
+{title: "CS 8803 - Compilers: Theory and Practice"
+instructors: ["Santhosh Pande"],
+courseCover: "",
+link: [{main: "Compilers: Theory and Practice"}],
+institution: "Georgia Tech",
+institutionLogo: "",
+description: "The objective of this course is to learn the theory and practice behind building automatic translators (compilers) for higher level programming languages and to engineer and build key phases of a compiler in Java or C++ for a small language."},
+
+{title: "CS173 - ",
+instructors: ["Shriram Krishnamurti"],
+courseCover:  "",
+link: [{main: "http://cs.brown.edu/courses/csci1730/2012/Videos/"}],
+institution: "",
+institutionLogo: "",
+description :""},
+
+{title: "",
+instructors: ["Matt Might"],
+courseCover:  "",
+link: [{main: "http://matt.might.net/teaching/compilers/spring-2015/"}],
+institution: "",
+institutionLogo: "",
+description :"This course doesn't contain tutorial videos, but we have included it here because Matt Might is such a nice teacher and he has written a wealth of great articles on compiler construction. We recommend checking out the outline of his course here."},
+
+
+{title: "",
+instructors: [""],
+courseCover: "",
+institution: "Illinois",
+institutionLogo: "",
+description: "",
+links: [{archive: "https://courses.engr.illinois.edu/cs421/fa2014/"}]},
+
+{title: "",
+instructors: [""],
+courseCover: "",
+institution: "Swarthmore",
+institutionLogo: "",
+description: "",
+links: [{archive: "https://www.cs.swarthmore.edu/~jpolitz/cs75/s16/index.html"}]},
+
+{title: "",
+instructors: [""],
+courseCover: "",
+institution: "Berkeley",
+institutionLogo: "",
+description: "",
+links: [{archive: "https://www2.eecs.berkeley.edu/Courses/CS164/", videos: "https://archive.org/details/ucberkeley-webcast-PL3A16CFC42CA6EF4F"}]},
+
+{title: "ASU",
+instructors: [""],
+courseCover: "",
+institution: "Berkeley",
+institutionLogo: "",
+description: "",
+links: [{archive: "https://www.youtube.com/playlist?list=PLK06XT3hFPzj4H_-sK-_5rfi4tpCbgdYe"}]}];
+*/
+
 
   document.querySelector("#roadmap").appendChild(componentList);
 
