@@ -1,0 +1,22 @@
+* Machinga Journal
+
+First entry
+
+** List of Resources
+
+Initially following through with:
+https://github.com/kanaka/mal/blob/master/process/guide.md
+
+https://kirit.com/Build%20me%20a%20LISP
+
+https://bernsteinbear.com/pl-resources/
+
+https://lisperator.net/pltut/parser/
+
+https://gist.github.com/cellularmitosis/71123906bb6dd5619748e33e8d072594
+
+https://michaelnielsen.org/ddi/lisp-as-the-maxwells-equations-of-software/
+
+McCarthy original paper analysis (But do these only after you have made substantial progress)
+
+Initial idea is to create a REPL space where you can quickly have a back and forth between the system
